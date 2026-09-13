@@ -1,13 +1,55 @@
 @import "tailwindcss";
 
 @layer base {
+  :root {
+    --eve-dark: #2B1720;
+    --eve-medium: #6D1835;
+    --eve-light: #E76F61;
+    --eve-bg: #F6F0E9;
+    --eve-copy: #161616;
+  }
+
   body {
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #161616;
+    background-color: #F6F0E9;
+    font-weight: 400;
   }
   
-  h1, h2, h3, .font-serif-heading {
-    font-family: 'Fraunces', Georgia, serif;
+  /* Headlines are Open Sans Bold with Dark Color #2B1720 */
+  h1, h2, h3, h4, h5, h6, .font-heading, .font-serif-heading {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: #2B1720;
   }
+
+  /* Logo font is Open Sans Light (weight 300) */
+  .font-logo {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+  }
+
+  /* Regular copy text */
+  p, span, li, input, textarea, select {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @media print {

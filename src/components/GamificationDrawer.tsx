@@ -1,22 +1,13 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
 import { 
   Award, 
   Sparkles, 
   Lock, 
   CheckCircle2, 
   X, 
-  Moon, 
-  Flame, 
-  Brain, 
   ChevronRight, 
   Check,
-  ShieldCheck,
-  Zap,
-  Clock,
-  Compass,
-  GitCommit,
-  Stethoscope
+  Clock
 } from 'lucide-react';
 import { ValidationBadge, LifestyleToolkit } from '../types';
 
@@ -46,19 +37,19 @@ export const GamificationDrawer: React.FC<GamificationDrawerProps> = ({
   const selectedToolkit = toolkits.find(t => t.id === selectedToolkitId) || toolkits[0];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm animate-fadeIn">
-      <div className="relative w-full max-w-2xl bg-[#FBF9F6] rounded-3xl shadow-2xl border border-[#DCD5C8] overflow-hidden flex flex-col max-h-[85vh]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-fadeIn">
+      <div className="relative w-full max-w-2xl bg-[#F6F0E9] rounded-3xl shadow-2xl border border-[#DDD4C7] overflow-hidden flex flex-col max-h-[85vh]">
         {/* Header */}
-        <div className="px-6 py-4 bg-white border-b border-[#EAE4D9] flex items-center justify-between shrink-0">
+        <div className="px-6 py-4 bg-white border-b border-[#DDD4C7] flex items-center justify-between shrink-0">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-xl bg-[#8B5CF6]/10 text-[#8B5CF6] flex items-center justify-center">
-              <Award className="w-4 h-4" />
+            <div className="w-8 h-8 rounded-xl bg-[#6D1835]/10 text-[#6D1835] flex items-center justify-center border border-[#6D1835]/20">
+              <Award className="w-4 h-4 text-[#6D1835]" />
             </div>
             <div>
-              <h2 className="font-serif-heading font-black text-lg text-[#1E1B18]">
+              <h2 className="font-bold text-lg text-[#2B1720]">
                 Toolkits & Badges
               </h2>
-              <p className="text-[11px] text-[#6B655E]">
+              <p className="text-[11px] text-[#161616]/75 font-normal">
                 {symptomsPresentCount} Symptome gematcht • {unlockedToolkitsCount}/{toolkits.length} Toolkits freigeschaltet
               </p>
             </div>
@@ -66,34 +57,34 @@ export const GamificationDrawer: React.FC<GamificationDrawerProps> = ({
 
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-full bg-[#FAF7F2] hover:bg-[#F2ECE3] border border-[#DDD6C8] flex items-center justify-center text-[#706A62] cursor-pointer"
+            className="w-8 h-8 rounded-full bg-[#FAF6F1] hover:bg-[#EAE2D6] border border-[#DDD4C7] flex items-center justify-center text-[#2B1720] cursor-pointer"
           >
-            <X className="w-4 h-4" />
+            <X className="w-4 h-4 text-[#2B1720]" />
           </button>
         </div>
 
         {/* Tab Selector */}
-        <div className="px-6 pt-3 bg-white flex items-center gap-3 border-b border-[#EAE4D9] shrink-0">
+        <div className="px-6 pt-3 bg-white flex items-center gap-3 border-b border-[#DDD4C7] shrink-0">
           <button
             onClick={() => setActiveTab('toolkits')}
             className={`pb-3 text-xs font-bold border-b-2 transition-all cursor-pointer flex items-center gap-1.5 ${
               activeTab === 'toolkits'
-                ? 'border-[#8B5CF6] text-[#8B5CF6]'
-                : 'border-transparent text-[#706A62] hover:text-[#1E1B18]'
+                ? 'border-[#2B1720] text-[#2B1720]'
+                : 'border-transparent text-[#161616]/70 hover:text-[#2B1720]'
             }`}
           >
-            <Sparkles className="w-3.5 h-3.5" />
+            <Sparkles className="w-3.5 h-3.5 text-[#E76F61]" />
             <span>Lifestyle Toolkits ({unlockedToolkitsCount}/{toolkits.length})</span>
           </button>
           <button
             onClick={() => setActiveTab('badges')}
             className={`pb-3 text-xs font-bold border-b-2 transition-all cursor-pointer flex items-center gap-1.5 ${
               activeTab === 'badges'
-                ? 'border-[#8B5CF6] text-[#8B5CF6]'
-                : 'border-transparent text-[#706A62] hover:text-[#1E1B18]'
+                ? 'border-[#2B1720] text-[#2B1720]'
+                : 'border-transparent text-[#161616]/70 hover:text-[#2B1720]'
             }`}
           >
-            <Award className="w-3.5 h-3.5" />
+            <Award className="w-3.5 h-3.5 text-[#6D1835]" />
             <span>Validation Badges ({unlockedBadgesCount}/{badges.length})</span>
           </button>
         </div>
@@ -113,38 +104,38 @@ export const GamificationDrawer: React.FC<GamificationDrawerProps> = ({
                       className={`p-4 rounded-2xl border transition-all cursor-pointer flex flex-col justify-between ${
                         toolkit.isUnlocked
                           ? isSelected
-                            ? 'bg-purple-50 border-[#8B5CF6] shadow-sm'
-                            : 'bg-white border-[#EAE4D9] hover:border-[#8B5CF6]/50 shadow-xs'
-                          : 'bg-[#F3EFEA]/80 border-[#E2DDD2] opacity-75 cursor-not-allowed'
+                            ? 'bg-white border-[#2B1720] shadow-sm'
+                            : 'bg-white border-[#DDD4C7] hover:border-[#6D1835]/50 shadow-xs'
+                          : 'bg-[#EAE2D6]/60 border-[#DDD4C7] opacity-75 cursor-not-allowed'
                       }`}
                     >
                       <div>
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-md bg-[#8B5CF6]/10 text-[#7C3AED]">
+                          <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-md bg-[#6D1835]/10 text-[#6D1835] border border-[#6D1835]/20">
                             {toolkit.badge}
                           </span>
                           {toolkit.isUnlocked ? (
-                            <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200 flex items-center gap-1">
-                              <Check className="w-3 h-3" /> Freigeschaltet
+                            <span className="text-[10px] font-bold text-[#6D1835] bg-[#E76F61]/15 px-2 py-0.5 rounded-full border border-[#E76F61]/30 flex items-center gap-1">
+                              <Check className="w-3 h-3 text-[#E76F61]" /> Freigeschaltet
                             </span>
                           ) : (
-                            <span className="text-[10px] font-bold text-[#8A8379] bg-[#EAE4D9] px-2 py-0.5 rounded-full flex items-center gap-1">
+                            <span className="text-[10px] font-normal text-[#161616]/60 bg-[#FAF6F1] px-2 py-0.5 rounded-full flex items-center gap-1 border border-[#DDD4C7]">
                               <Lock className="w-3 h-3" /> {toolkit.unlockThreshold} Matches nötig
                             </span>
                           )}
                         </div>
 
-                        <h3 className="font-bold text-sm text-[#1E1B18] mb-1">
+                        <h3 className="font-bold text-sm text-[#2B1720] mb-1">
                           {toolkit.title}
                         </h3>
 
-                        <p className="text-xs text-[#6B655E] leading-relaxed">
+                        <p className="text-xs text-[#161616]/80 leading-relaxed font-normal">
                           {toolkit.tagline}
                         </p>
                       </div>
 
                       {toolkit.isUnlocked && (
-                        <div className="mt-3 pt-2.5 border-t border-[#F0EBE1] text-[11px] font-bold text-[#8B5CF6] flex items-center justify-between">
+                        <div className="mt-3 pt-2.5 border-t border-[#EAE2D6] text-[11px] font-bold text-[#6D1835] flex items-center justify-between">
                           <span>Protokoll ansehen</span>
                           <ChevronRight className="w-3.5 h-3.5" />
                         </div>
@@ -156,18 +147,18 @@ export const GamificationDrawer: React.FC<GamificationDrawerProps> = ({
 
               {/* Selected Toolkit Protocol Detail Card */}
               {selectedToolkit && selectedToolkit.isUnlocked && (
-                <div className="bg-white border border-[#8B5CF6]/30 rounded-2xl p-5 shadow-xs space-y-4">
-                  <div className="flex items-center justify-between border-b border-[#F0EBE1] pb-3">
+                <div className="bg-white border border-[#2B1720] rounded-2xl p-5 shadow-xs space-y-4">
+                  <div className="flex items-center justify-between border-b border-[#EAE2D6] pb-3">
                     <div>
-                      <span className="text-[10px] font-black uppercase tracking-wider text-[#8B5CF6]">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#6D1835]">
                         {selectedToolkit.badge} Protokoll
                       </span>
-                      <h3 className="font-serif-heading font-black text-base text-[#1E1B18]">
+                      <h3 className="font-bold text-base text-[#2B1720]">
                         {selectedToolkit.title}
                       </h3>
                     </div>
-                    <span className="text-xs text-[#6B655E]">
-                      Empfohlenes Supplement / Food: <strong>{selectedToolkit.keySupplementOrFood}</strong>
+                    <span className="text-xs text-[#161616]/75 font-normal">
+                      Empfohlenes Supplement / Food: <strong className="text-[#2B1720] font-bold">{selectedToolkit.keySupplementOrFood}</strong>
                     </span>
                   </div>
 
@@ -176,16 +167,16 @@ export const GamificationDrawer: React.FC<GamificationDrawerProps> = ({
                     {selectedToolkit.protocolSteps.map((step, idx) => (
                       <div
                         key={idx}
-                        className="bg-[#FAF7F2] p-3 rounded-xl border border-[#EAE4D9] text-xs text-[#2E2A25]"
+                        className="bg-[#FAF6F1] p-3 rounded-xl border border-[#DDD4C7] text-xs text-[#161616]"
                       >
-                        <div className="flex items-center gap-2 text-[11px] font-bold text-[#8B5CF6] mb-1">
-                          <Clock className="w-3 h-3" />
+                        <div className="flex items-center gap-2 text-[11px] font-bold text-[#6D1835] mb-1">
+                          <Clock className="w-3 h-3 text-[#E76F61]" />
                           <span>{step.timing}</span>
                         </div>
-                        <div className="font-extrabold text-xs text-[#1E1B18] mb-1">
+                        <div className="font-bold text-xs text-[#2B1720] mb-1">
                           {step.action}
                         </div>
-                        <div className="text-[11px] text-[#6B655E] leading-relaxed">
+                        <div className="text-[11px] text-[#161616]/80 leading-relaxed font-normal">
                           {step.scientificReason}
                         </div>
                       </div>
@@ -193,14 +184,14 @@ export const GamificationDrawer: React.FC<GamificationDrawerProps> = ({
                   </div>
 
                   {/* Quick Checklist */}
-                  <div className="pt-2 border-t border-[#F0EBE1]">
-                    <div className="text-xs font-bold text-[#1E1B18] mb-2">
+                  <div className="pt-2 border-t border-[#EAE2D6]">
+                    <div className="text-xs font-bold text-[#2B1720] mb-2">
                       Checkliste für den Alltag:
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                       {selectedToolkit.quickChecklist.map((item, idx) => (
-                        <div key={idx} className="flex items-center gap-1.5 text-xs text-[#4A453E]">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                        <div key={idx} className="flex items-center gap-1.5 text-xs text-[#161616] font-normal">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#E76F61] shrink-0" />
                           <span>{item}</span>
                         </div>
                       ))}
@@ -221,45 +212,45 @@ export const GamificationDrawer: React.FC<GamificationDrawerProps> = ({
                     key={badge.id}
                     className={`p-4 rounded-2xl border transition-all flex flex-col justify-between ${
                       badge.isUnlocked
-                        ? 'bg-amber-50/70 border-amber-200 shadow-xs'
-                        : 'bg-white border-[#EAE4D9]'
+                        ? 'bg-white border-[#2B1720] shadow-xs'
+                        : 'bg-white/90 border-[#DDD4C7]'
                     }`}
                   >
                     <div>
                       <div className="flex items-center justify-between mb-2">
                         <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                          badge.isUnlocked ? 'bg-amber-500 text-white' : 'bg-[#FAF7F2] text-[#8A8379] border border-[#EAE4D9]'
+                          badge.isUnlocked ? 'bg-[#2B1720] text-[#E76F61]' : 'bg-[#FAF6F1] text-[#2B1720]/60 border border-[#DDD4C7]'
                         }`}>
                           <Award className="w-4 h-4" />
                         </div>
                         {badge.isUnlocked ? (
-                          <span className="text-[10px] font-black uppercase text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full">
+                          <span className="text-[10px] font-bold uppercase text-[#6D1835] bg-[#E76F61]/15 border border-[#E76F61]/30 px-2 py-0.5 rounded-full">
                             Freigeschaltet ✓
                           </span>
                         ) : (
-                          <span className="text-[10px] font-bold text-[#8A8379]">
+                          <span className="text-[10px] font-normal text-[#161616]/60">
                             {badge.progressCurrent} / {badge.progressTarget}
                           </span>
                         )}
                       </div>
 
-                      <h3 className="font-bold text-sm text-[#1E1B18] mb-0.5">
+                      <h3 className="font-bold text-sm text-[#2B1720] mb-0.5">
                         {badge.title}
                       </h3>
-                      <div className="text-[11px] font-bold text-[#8B5CF6] mb-1.5">
+                      <div className="text-[11px] font-bold text-[#6D1835] mb-1.5">
                         {badge.subtitle}
                       </div>
-                      <p className="text-xs text-[#6B655E] leading-relaxed">
+                      <p className="text-xs text-[#161616]/80 leading-relaxed font-normal">
                         {badge.description}
                       </p>
                     </div>
 
                     {/* Progress Bar */}
-                    <div className="mt-3 pt-2 border-t border-[#F0EBE1]">
-                      <div className="w-full h-1.5 bg-[#EAE4D9] rounded-full overflow-hidden">
+                    <div className="mt-3 pt-2 border-t border-[#EAE2D6]">
+                      <div className="w-full h-1.5 bg-[#EAE2D6] rounded-full overflow-hidden">
                         <div 
                           className={`h-full rounded-full transition-all ${
-                            badge.isUnlocked ? 'bg-amber-500' : 'bg-[#8B5CF6]'
+                            badge.isUnlocked ? 'bg-gradient-to-r from-[#6D1835] to-[#E76F61]' : 'bg-[#2B1720]'
                           }`}
                           style={{ width: `${percent}%` }}
                         />
@@ -273,13 +264,13 @@ export const GamificationDrawer: React.FC<GamificationDrawerProps> = ({
         </div>
 
         {/* Footer */}
-        <div className="px-6 py-3 bg-white border-t border-[#EAE4D9] flex items-center justify-between shrink-0">
-          <span className="text-[11px] text-[#8A8379]">
+        <div className="px-6 py-3 bg-white border-t border-[#DDD4C7] flex items-center justify-between shrink-0">
+          <span className="text-[11px] text-[#161616]/75 font-normal">
             Swipen schaltet Schritt für Schritt neue wissenschaftliche Toolkits frei.
           </span>
           <button
             onClick={onClose}
-            className="px-4 py-1.5 bg-[#1E1B18] hover:bg-[#332F2A] text-white text-xs font-bold rounded-xl cursor-pointer"
+            className="px-4 py-1.5 bg-[#2B1720] hover:bg-[#3D202D] text-white text-xs font-bold rounded-xl cursor-pointer"
           >
             Fertig
           </button>

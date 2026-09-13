@@ -2,16 +2,12 @@ import React from 'react';
 import { 
   X, 
   Sparkles, 
-  CheckCircle2, 
-  ArrowRight, 
   Brain, 
-  Github, 
   Cloud, 
-  Flame, 
   Layers, 
-  Award,
-  Zap
+  Award
 } from 'lucide-react';
+import { EveLogo } from './EveLogo';
 
 interface PitchGuideModalProps {
   isOpen: boolean;
@@ -25,136 +21,144 @@ export const PitchGuideModal: React.FC<PitchGuideModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-fadeIn">
       <div 
-        className="bg-[#FAF8F5] rounded-3xl border border-[#E2DCCE] max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl p-6 sm:p-8 space-y-6"
+        className="bg-[#F6F0E9] rounded-3xl border border-[#DDD4C7] max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl p-6 sm:p-8 space-y-6"
         onClick={e => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-[#ECE6D8] pb-4">
+        <div className="flex items-center justify-between border-b border-[#DDD4C7] pb-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-[#8B5CF6] text-white flex items-center justify-center text-xl font-bold">
-              🌸
-            </div>
+            <EveLogo size="md" showSubtitle={false} />
             <div>
               <div className="flex items-center gap-2">
-                <h2 className="font-serif-heading text-xl font-bold text-[#1E1B18]">
-                  EVE — Hackathon Pitch & Architecture
+                <h2 className="font-bold text-xl text-[#2B1720]">
+                  EVE — Hackathon Pitch & Architektur
                 </h2>
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#8B5CF6]/15 text-[#7C3AED]">
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#6D1835]/10 text-[#6D1835] border border-[#6D1835]/20">
                   AI Women Hackathon Hamburg
                 </span>
               </div>
-              <p className="text-xs text-[#7A746E]">
-                EVE (Evidence for every woman) — 3-Minute Pitch & Strategy Guide
+              <p className="text-xs text-[#161616]/75 font-normal">
+                EVE (Evidence for every woman) — 3-Minute Pitch & Strategie-Guide
               </p>
             </div>
           </div>
 
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-full bg-white border border-[#DCD5C8] flex items-center justify-center text-[#6B655E] hover:text-[#1E1B18] cursor-pointer"
+            className="w-8 h-8 rounded-full bg-white border border-[#DDD4C7] flex items-center justify-center text-[#2B1720] hover:text-[#6D1835] cursor-pointer"
           >
-            <X className="w-4 h-4" />
+            <X className="w-4 h-4 text-[#2B1720]" />
           </button>
         </div>
 
         {/* 1. THE PITCH HOOK (The Problem) */}
-        <div className="bg-white rounded-2xl p-5 border border-[#E9E3D6] space-y-2">
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#8B5CF6]">
-            <span className="w-2 h-2 rounded-full bg-[#8B5CF6]" />
-            1. The Problem: The Disconnected Dots of Perimenopause
+        <div className="bg-white rounded-2xl p-5 border border-[#DDD4C7] space-y-2">
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#6D1835]">
+            <span className="w-2 h-2 rounded-full bg-[#E76F61]" />
+            1. Das Problem: Die isolierten Symptom-Punkte der Perimenopause
           </div>
-          <p className="text-sm font-semibold text-[#1E1B18] italic">
-            „Waking at 3:17 AM staring at the ceiling? Forgetting a word mid-sentence? Sudden rage over chewed toast? You assume you're stressed, failing at work, or losing your mind.“
+          <p className="text-sm font-bold text-[#2B1720] italic">
+            „Um 3:17 Uhr nachts aufgewacht und an die Decke gestarrt? Mitten im Satz das Wort vergessen? Plötzliche Reizbarkeit? Frauen glauben oft, sie seien überarbeitet, gestresst oder versagen.“
           </p>
-          <p className="text-xs text-[#6B655E] leading-relaxed">
-            Over <strong>1.1 billion women</strong> will enter perimenopause by 2025. Yet over 70% do not recognize their symptoms because medical education and tracking tools only focus on hot flashes and missed periods. Symptoms feel like random, disjointed failures rather than a single endocrine transition.
+          <p className="text-xs text-[#161616]/80 leading-relaxed font-normal">
+            Über <strong>1,1 Milliarden Frauen</strong> erreichen 2025 die Perimenopause. Doch mehr als 70% erkennen ihre frühen Symptome nicht, weil herkömmliche Aufklärung fast nur Hitzewallungen und Ausbleiben der Periode thematisiert. Die Beschwerden wirken wie zusammenhanglose Belastungen statt wie eine einheitliche endokrine Transition.
           </p>
         </div>
 
         {/* 2. CORE CONCEPT & UX */}
-        <div className="bg-white rounded-2xl p-5 border border-[#E9E3D6] space-y-3">
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#1E1B18]">
-            <Sparkles className="w-4 h-4 text-[#8B5CF6]" />
-            2. Core Concept & UX: "Swipe to Connect the Dots"
+        <div className="bg-white rounded-2xl p-5 border border-[#DDD4C7] space-y-3">
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#2B1720]">
+            <Sparkles className="w-4 h-4 text-[#E76F61]" />
+            2. Kernkonzept & UX: „Swipe to Connect the Dots“
           </div>
-          <p className="text-xs text-[#524C44] leading-relaxed">
-            Traditional symptom tracking requires high cognitive load: logging dates, slider scales, and medical terminology. In brain fog and fatigue, women abandon it.
+          <p className="text-xs text-[#161616]/80 leading-relaxed font-normal">
+            Klassisches Symptom-Tracking scheitert an hoher kognitiver Belastung: Tabellen, Schieberegler und medizinische Fachbegriffe überfordern bei Brain Fog und Schlafmangel.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-            <div className="p-3 bg-[#FAF7F2] rounded-xl border border-[#EAE4D9] text-xs">
-              <strong className="text-[#1E1B18] block mb-1">🎴 Low Cognitive Load Swiping</strong>
-              Ultra-relatable micro-scenarios (e.g. <em>"Keys in the fridge"</em> or <em>"Sudden internal radiator"</em>) sorted into <code className="text-[#8B5CF6]">symptoms_present</code> and <code className="text-zinc-600">symptoms_absent</code> with effortless Tinder-style swipes.
+            <div className="p-3 bg-[#FAF6F1] rounded-xl border border-[#DDD4C7] text-xs">
+              <strong className="text-[#2B1720] block mb-1 font-bold">🎴 Kognitiv entlastendes Swipen</strong>
+              <span className="font-normal text-[#161616]/80 leading-relaxed">
+                Alltägliche Mikroszenarien (z.B. <em>„Schlüssel im Kühlschrank“</em> oder <em>„Plötzliche innere Heizung“</em>) mühelos per Swipe in <code className="text-[#6D1835] font-bold">symptoms_present</code> und <code className="text-[#161616]/70">symptoms_absent</code> einordnen.
+              </span>
             </div>
-            <div className="p-3 bg-[#FAF7F2] rounded-xl border border-[#EAE4D9] text-xs">
-              <strong className="text-[#1E1B18] block mb-1">🧩 Dot Connection Threshold</strong>
-              Hitting the 10-match threshold triggers the constellation reveal: proving these are not 10 unrelated breakdowns, but 10 receptors responding to the estrogen-progesterone symphony.
+            <div className="p-3 bg-[#FAF6F1] rounded-xl border border-[#DDD4C7] text-xs">
+              <strong className="text-[#2B1720] block mb-1 font-bold">🧩 Dot Connection Schwellenwert</strong>
+              <span className="font-normal text-[#161616]/80 leading-relaxed">
+                Nach 10 Matches schaltet sich das Dot Connection Profil frei: Es verbindet die Punkte zu einem ganzheitlichen Bild und validiert das Erleben medizinisch.
+              </span>
             </div>
           </div>
         </div>
 
         {/* 3. GAMIFICATION & UNLOCKS */}
-        <div className="bg-white rounded-2xl p-5 border border-[#E9E3D6] space-y-3">
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#1E1B18]">
-            <Award className="w-4 h-4 text-amber-600" />
-            3. Gamification: Myth-Busting & Actionable Toolkits
+        <div className="bg-white rounded-2xl p-5 border border-[#DDD4C7] space-y-3">
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#2B1720]">
+            <Award className="w-4 h-4 text-[#6D1835]" />
+            3. Gamification: Myth-Busting & evidenzbasierte Toolkits
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
-            <div className="p-2.5 bg-amber-50/70 border border-amber-200 rounded-xl">
-              <strong className="text-amber-900 block mb-0.5">🧠 Myth-Buster Trivia</strong>
-              Interspersed interactive cards debunking medical misconceptions (e.g. routine FSH blood test reliability).
+            <div className="p-2.5 bg-[#FAF6F1] border border-[#DDD4C7] rounded-xl">
+              <strong className="text-[#2B1720] block mb-0.5 font-bold">🧠 Myth-Buster Trivia</strong>
+              <span className="text-[#161616]/80 font-normal">
+                Eingestreute interaktive Quizkarten entkräften Mythen (z.B. Unzuverlässigkeit isolierter FSH-Bluttests).
+              </span>
             </div>
-            <div className="p-2.5 bg-purple-50/70 border border-purple-200 rounded-xl">
-              <strong className="text-purple-900 block mb-0.5">🌿 Unlockable Toolkits</strong>
-              Step-by-step lifestyle protocols (3 AM Sleep Rescue, Thermoregulation, Metabolic Pacing) unlocked by swiping.
+            <div className="p-2.5 bg-[#6D1835]/10 border border-[#6D1835]/20 rounded-xl">
+              <strong className="text-[#6D1835] block mb-0.5 font-bold">🌿 Freischaltbare Toolkits</strong>
+              <span className="text-[#161616]/80 font-normal">
+                Wissenschaftliche Lifestyle-Protokolle (3-Uhr-Nachts-Schlaf, Thermoregulation, Mikronährstoffe).
+              </span>
             </div>
-            <div className="p-2.5 bg-emerald-50/70 border border-emerald-200 rounded-xl">
-              <strong className="text-emerald-900 block mb-0.5">🌟 Validation Badges</strong>
-              Milestone rewards (Self-Advocate, Dot Connector, Myth Slayer, Empowered Patient).
+            <div className="p-2.5 bg-[#E76F61]/15 border border-[#E76F61]/30 rounded-xl">
+              <strong className="text-[#2B1720] block mb-0.5 font-bold">🌟 Validierungs-Badges</strong>
+              <span className="text-[#161616]/80 font-normal">
+                Belohnende Meilensteine (Selbst-Advokatin, Dot Connector, Myth Slayer, Informierte Patientin).
+              </span>
             </div>
           </div>
         </div>
 
         {/* 4. TECH STACK & ARCHITECTURE */}
-        <div className="bg-white rounded-2xl p-5 border border-[#E9E3D6] space-y-3">
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#1E1B18]">
-            <Layers className="w-4 h-4 text-indigo-600" />
-            4. Tech Stack & Implementation Architecture
+        <div className="bg-white rounded-2xl p-5 border border-[#DDD4C7] space-y-3">
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#2B1720]">
+            <Layers className="w-4 h-4 text-[#6D1835]" />
+            4. Tech-Stack & Architektur
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-            <div className="p-3 bg-[#FAF7F2] rounded-xl border border-[#EAE4D9]">
-              <div className="flex items-center gap-1.5 font-bold text-[#1E1B18] mb-1">
-                <Brain className="w-4 h-4 text-[#8B5CF6]" />
-                <span>Google AI Studio & Gemini 3.8 Flash</span>
+            <div className="p-3 bg-[#FAF6F1] rounded-xl border border-[#DDD4C7]">
+              <div className="flex items-center gap-1.5 font-bold text-[#2B1720] mb-1">
+                <Brain className="w-4 h-4 text-[#6D1835]" />
+                <span>Google AI Studio & Gemini 2.5 Flash</span>
               </div>
-              <p className="text-[11px] text-[#6B655E] leading-relaxed">
-                Server-side calls via <code className="text-[#8B5CF6]">@google/genai</code> generating dynamic swipe cards (<code className="text-[10px]">/api/generate-cards</code>) and multi-dimensional clinical synthesis (<code className="text-[10px]">/api/assess-symptoms</code>).
+              <p className="text-[11px] text-[#161616]/80 leading-relaxed font-normal">
+                Server-seitige API-Routen via <code className="text-[#6D1835] font-bold">@google/genai</code> generieren dynamische Swipe-Karten (<code className="text-[10px]">/api/generate-cards</code>) und multi-dimensionale klinische Synthesen (<code className="text-[10px]">/api/assess-symptoms</code>).
               </p>
             </div>
 
-            <div className="p-3 bg-[#FAF7F2] rounded-xl border border-[#EAE4D9]">
-              <div className="flex items-center gap-1.5 font-bold text-[#1E1B18] mb-1">
-                <Cloud className="w-4 h-4 text-sky-600" />
+            <div className="p-3 bg-[#FAF6F1] rounded-xl border border-[#DDD4C7]">
+              <div className="flex items-center gap-1.5 font-bold text-[#2B1720] mb-1">
+                <Cloud className="w-4 h-4 text-[#E76F61]" />
                 <span>Google Cloud Run & GitHub CI/CD</span>
               </div>
-              <p className="text-[11px] text-[#6B655E] leading-relaxed">
-                Containerized Node.js + Express backend serving production Vite SPA with zero-leakage secret management (<code className="text-[10px]">.env</code>).
+              <p className="text-[11px] text-[#161616]/80 leading-relaxed font-normal">
+                Containerisiertes Node.js + Express Backend mit serverseitig geschützten Gemini Secrets (<code className="text-[10px]">.env</code>) und Vite React Client.
               </p>
             </div>
           </div>
         </div>
 
-        {/* 5. LIVE DEMO SCRIPT FOR JURY */}
-        <div className="bg-[#FAF7F2] rounded-2xl p-4 border border-[#EAE4D9] flex items-center justify-between">
-          <div className="text-xs text-[#524C44]">
-            <strong>Hackathon Live Demo Tip:</strong> Toggle the <strong>Mobile Simulator</strong> in the top header to demonstrate the tactile Tinder swipe gesture on an iPhone 16 Pro viewport!
+        {/* 5. LIVE DEMO SCRIPT */}
+        <div className="bg-[#FAF6F1] rounded-2xl p-4 border border-[#DDD4C7] flex items-center justify-between">
+          <div className="text-xs text-[#161616]/85 font-normal">
+            <strong className="text-[#2B1720] font-bold">Hackathon Live Demo Tipp:</strong> Aktiviere den <strong className="text-[#2B1720]">Mobile Simulator</strong> im Header, um das taktile Swipe-Erlebnis auf einem iPhone 16 Pro Viewport live vorzuführen!
           </div>
           <button
             onClick={onClose}
-            className="px-4 py-2 bg-[#8B5CF6] hover:bg-[#7C3AED] text-white text-xs font-bold rounded-xl transition-all cursor-pointer shadow-xs"
+            className="px-4 py-2 bg-[#2B1720] hover:bg-[#3D202D] text-white text-xs font-bold rounded-xl transition-all cursor-pointer shadow-xs"
           >
-            Start Swiping Now
+            Jetzt loslegen
           </button>
         </div>
       </div>

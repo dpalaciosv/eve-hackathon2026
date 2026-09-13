@@ -424,18 +424,18 @@ export default function App() {
     if (activeView === 'toolkits') {
       return (
         <div className="w-full max-w-4xl mx-auto space-y-6">
-          <div className="flex items-center justify-between border-b border-[#EAE4D9] pb-4">
+          <div className="flex items-center justify-between border-b border-[#DDD4C7] pb-4">
             <div>
-              <h2 className="font-serif-heading font-black text-2xl text-[#1E1B18]">
+              <h2 className="font-bold text-2xl text-[#2B1720]">
                 EVE Lifestyle Toolkits & Badges
               </h2>
-              <p className="text-xs text-[#6B655E]">
+              <p className="text-xs text-[#161616]/75 font-normal">
                 Evidence for every woman: Wissenschaftlich fundierte Sofort-Protokolle, freigeschaltet durch deine Symptom-Matches.
               </p>
             </div>
             <button
               onClick={() => setActiveView('swipe')}
-              className="px-3.5 py-1.5 bg-[#8B5CF6] text-white text-xs font-bold rounded-xl cursor-pointer"
+              className="px-3.5 py-1.5 bg-[#2B1720] hover:bg-[#3D202D] text-white text-xs font-bold rounded-xl cursor-pointer shadow-xs"
             >
               Weiter Swipen
             </button>
@@ -446,27 +446,27 @@ export default function App() {
               <div
                 key={t.id}
                 className={`p-5 rounded-2xl border transition-all ${
-                  t.isUnlocked ? 'bg-white border-[#8B5CF6]/40 shadow-xs' : 'bg-[#FAF8F5] border-[#E8E1D5] opacity-75'
+                  t.isUnlocked ? 'bg-white border-[#2B1720] shadow-xs' : 'bg-[#FAF6F1] border-[#DDD4C7] opacity-75'
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-[#8B5CF6]/10 text-[#7C3AED]">
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-[#6D1835]/10 text-[#6D1835] border border-[#6D1835]/20">
                     {t.badge}
                   </span>
                   <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
-                    t.isUnlocked ? 'bg-emerald-50 text-emerald-800' : 'bg-zinc-100 text-zinc-500'
+                    t.isUnlocked ? 'bg-[#E76F61]/15 text-[#6D1835] border border-[#E76F61]/30' : 'bg-[#FAF6F1] text-[#161616]/60 border border-[#DDD4C7]'
                   }`}>
                     {t.isUnlocked ? 'Freigeschaltet ✓' : `${t.unlockThreshold} Matches nötig`}
                   </span>
                 </div>
-                <h3 className="font-bold text-base text-[#1E1B18] mb-1">{t.title}</h3>
-                <p className="text-xs text-[#6B655E] mb-3">{t.tagline}</p>
+                <h3 className="font-bold text-base text-[#2B1720] mb-1">{t.title}</h3>
+                <p className="text-xs text-[#161616]/80 mb-3 font-normal">{t.tagline}</p>
                 <div className="space-y-2">
                   {t.protocolSteps.map((step, sIdx) => (
-                    <div key={sIdx} className="bg-[#FAF7F2] p-2.5 rounded-xl text-xs text-[#3E3933]">
-                      <div className="font-bold text-[11px] text-[#8B5CF6]">{step.timing}</div>
-                      <div className="font-semibold text-xs text-[#1E1B18]">{step.action}</div>
-                      <div className="text-[10px] text-zinc-500 mt-0.5">{step.scientificReason}</div>
+                    <div key={sIdx} className="bg-[#FAF6F1] p-2.5 rounded-xl border border-[#DDD4C7] text-xs text-[#161616]">
+                      <div className="font-bold text-[11px] text-[#6D1835]">{step.timing}</div>
+                      <div className="font-bold text-xs text-[#2B1720]">{step.action}</div>
+                      <div className="text-[10px] text-[#161616]/75 mt-0.5 font-normal">{step.scientificReason}</div>
                     </div>
                   ))}
                 </div>
@@ -498,7 +498,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF8F5] text-[#1E1B18] flex flex-col selection:bg-[#8B5CF6]/20">
+    <div className="min-h-screen bg-[#F6F0E9] text-[#161616] flex flex-col selection:bg-[#E76F61]/30 selection:text-[#2B1720]">
       {/* Top Universal Navigation Header */}
       <Header
         activeView={activeView}
@@ -537,41 +537,41 @@ export default function App() {
       </main>
 
       {/* Floating Bottom Quick Bar for Pitch / Reset */}
-      <footer className="border-t border-[#EAE4D9] bg-white/70 backdrop-blur-xs py-3 px-4 text-xs text-[#706A62]">
+      <footer className="border-t border-[#DDD4C7] bg-white/80 backdrop-blur-xs py-3 px-4 text-xs text-[#161616]/75">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
-          <div className="flex items-center gap-2 font-medium">
+          <div className="flex items-center gap-2 font-normal">
             <span>AI Women Hackathon Hamburg</span>
             <span>•</span>
-            <span className="text-[#8B5CF6] font-bold">EVE — Evidence for every woman</span>
+            <span className="text-[#2B1720] font-bold">EVE — Evidence for every woman</span>
             <span>•</span>
-            <span>Powered by Gemini 3.8 Flash & Google Cloud Run</span>
+            <span>Powered by Gemini & Google Cloud Run</span>
           </div>
 
           <div className="flex items-center gap-3">
             <button
               onClick={() => setIsHistoryModalOpen(true)}
-              className="text-[11px] font-bold text-[#8B5CF6] hover:underline cursor-pointer flex items-center gap-1"
+              className="text-[11px] font-bold text-[#6D1835] hover:underline cursor-pointer flex items-center gap-1"
             >
-              <History className="w-3.5 h-3.5" />
+              <History className="w-3.5 h-3.5 text-[#6D1835]" />
               <span>Verlauf ({connectionHistory.length})</span>
             </button>
             <button
               onClick={() => setIsProfileModalOpen(true)}
-              className="text-[11px] font-bold text-zinc-600 hover:text-zinc-900 cursor-pointer flex items-center gap-1"
+              className="text-[11px] font-bold text-[#2B1720] hover:text-[#6D1835] cursor-pointer flex items-center gap-1"
             >
-              <User className="w-3.5 h-3.5" />
+              <User className="w-3.5 h-3.5 text-[#6D1835]" />
               <span>Profil</span>
             </button>
             <button
               onClick={handleResetDemo}
-              className="text-[11px] font-bold text-zinc-500 hover:text-zinc-800 transition-colors flex items-center gap-1 cursor-pointer"
+              className="text-[11px] font-normal text-[#161616]/60 hover:text-[#2B1720] transition-colors flex items-center gap-1 cursor-pointer"
             >
               <RefreshCw className="w-3 h-3" />
               <span>Demo zurücksetzen</span>
             </button>
             <button
               onClick={() => setIsPitchGuideOpen(true)}
-              className="text-[11px] font-bold text-[#8B5CF6] hover:underline cursor-pointer"
+              className="text-[11px] font-bold text-[#6D1835] hover:underline cursor-pointer"
             >
               Pitch-Guide
             </button>
