@@ -1,6 +1,3 @@
-# eve
-EVE - Evidence for Every Woman
-
 # 🌸 Eve
 
 > Ein KI-gestützter digitaler Begleiter für Frauen in der Perimenopause zur Aufklärung, Symptomverfolgung und Verbesserung der Lebensqualität. Powered by Google Gemini.
