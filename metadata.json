@@ -1,0 +1,6 @@
+{
+  "name": "EVE — Evidence for every woman",
+  "description": "EVE (Evidence for every woman): Swipe-to-connect perimenopause symptom tracker, personal profiles, longitudinal history, myth-busters, unlockable toolkits, and Gemini endocrinological synthesis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
