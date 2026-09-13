@@ -6,9 +6,6 @@
 [![AI Engine](https://img.shields.io/badge/AI%20Engine-Google%20Gemini-orange.svg)](https://aistudio.google.com/)
 [![Data Privacy](https://img.shields.io/badge/Compliance-GDPR%20Ready-brightgreen.svg)](#)
 
-<p align="center">
-  <img src="https://via.placeholder.com/600x300?text=Eve+App+Preview" alt="Eve App Preview">
-</p>
 
 ## 📖 Inhaltsverzeichnis
 - [Über das Projekt](#über-das-projekt)
