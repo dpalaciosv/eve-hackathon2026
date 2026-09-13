@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Outer Ring -->
+  <circle cx="50" cy="50" r="44" stroke="#6D1835" stroke-width="5.5" />
+  
+  <!-- Upper Arch / Semicircle -->
+  <path d="M 21 50 A 29 29 0 0 1 79 50" stroke="#6D1835" stroke-width="5.5" stroke-linecap="round" fill="none" />
+  
+  <!-- Horizontal Diameter Line -->
+  <line x1="6" y1="50" x2="94" y2="50" stroke="#6D1835" stroke-width="5.5" stroke-linecap="round" />
+  
+  <!-- Center Core Dot -->
+  <circle cx="50" cy="50" r="7" fill="#6D1835" />
+</svg>

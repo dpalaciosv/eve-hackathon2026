@@ -202,9 +202,9 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
             }`}
           >
             <Activity className="w-3.5 h-3.5 text-[#6D1835]" />
-            <span>Demo-Profile wechseln</span>
+            <span>Beispiel-Profile</span>
             <span className="text-[10px] bg-[#6D1835]/10 text-[#6D1835] px-1.5 py-0.2 rounded-full font-bold">
-              3 Personas
+              3 Phasen
             </span>
           </button>
 
@@ -386,11 +386,11 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
             </form>
           )}
 
-          {/* TAB 2: DEMO PERSONAS */}
+          {/* TAB 2: BEISPIEL-PROFILE */}
           {activeTab === 'accounts' && (
             <div className="space-y-4">
               <div className="p-3 bg-white rounded-xl border border-[#DDD4C7] text-xs text-[#161616]/80 font-normal">
-                💡 <strong>Hackathon Demo-Feature:</strong> Wechsle blitzschnell zwischen typischen klinischen Perimenopause-Profilen, um zu sehen wie sich EVE und die Dot Connections an verschiedene Phasen anpassen.
+                💡 <strong>Klinische Orientierung:</strong> Erkunde typische Symptomkonstellationen unterschiedlicher Perimenopause-Phasen, um zu sehen, wie EVE neuroendokrine Muster zuordnet.
               </div>
 
               <div className="space-y-3">
@@ -444,7 +444,7 @@ export const UserProfileModal: React.FC<UserProfileModalProps> = ({
                             }}
                             className="px-3.5 py-1.5 bg-[#FAF6F1] hover:bg-[#2B1720] hover:text-white border border-[#DDD4C7] text-xs font-bold text-[#2B1720] rounded-xl transition-all cursor-pointer"
                           >
-                            Als {profile.name.split(' ')[0]} testen
+                            Profil laden
                           </button>
                         )}
                       </div>

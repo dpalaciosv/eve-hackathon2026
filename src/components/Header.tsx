@@ -5,7 +5,7 @@ import {
   Award, 
   Smartphone, 
   Monitor, 
-  Presentation,
+  Info,
   History,
   User,
   ChevronDown,
@@ -182,7 +182,7 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Mobile Simulator Frame Toggle */}
             <button
               onClick={onToggleMobileSimulator}
-              title={isMobileSimulator ? "Desktop-Ansicht" : "iPhone 16 Pro Vorschau"}
+              title={isMobileSimulator ? "Desktop-Ansicht" : "Smartphone-Vorschau"}
               className={`p-2 sm:px-3 sm:py-1.5 rounded-xl border text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-xs ${
                 isMobileSimulator
                   ? 'bg-[#2B1720] text-white border-[#2B1720]'
@@ -197,18 +197,19 @@ export const Header: React.FC<HeaderProps> = ({
               ) : (
                 <>
                   <Smartphone className="w-4 h-4 text-[#6D1835]" />
-                  <span className="hidden xl:inline">iPhone</span>
+                  <span className="hidden xl:inline">Mobile</span>
                 </>
               )}
             </button>
 
-            {/* Hackathon Pitch Guide */}
+            {/* Über EVE Info Modal */}
             <button
               onClick={onOpenPitchGuide}
+              title="Über EVE & Funktionsweise"
               className="p-2 sm:px-3 sm:py-1.5 bg-[#FAF6F1] hover:bg-[#EAE2D6] border border-[#DDD4C7] text-xs font-bold text-[#2B1720] rounded-xl transition-all cursor-pointer flex items-center gap-1.5 shadow-xs"
             >
-              <Presentation className="w-4 h-4 text-[#6D1835]" />
-              <span className="hidden xl:inline">Pitch</span>
+              <Info className="w-4 h-4 text-[#6D1835]" />
+              <span className="hidden xl:inline">Über EVE</span>
             </button>
           </div>
         </div>

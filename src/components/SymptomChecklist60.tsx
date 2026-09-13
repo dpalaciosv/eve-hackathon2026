@@ -359,11 +359,8 @@ export const SymptomChecklist60: React.FC<SymptomChecklist60Props> = ({
                         )}
                       </div>
 
-                      <h3 className="text-base sm:text-lg font-bold text-[#2B1720] hover:text-[#6D1835] transition-colors flex items-center gap-2">
-                        <span>{sym.titleDe}</span>
-                        <span className="text-xs text-[#161616]/50 font-normal hidden md:inline">
-                          ({sym.titleEn})
-                        </span>
+                      <h3 className="text-base sm:text-lg font-bold text-[#2B1720] hover:text-[#6D1835] transition-colors">
+                        {sym.titleDe}
                       </h3>
 
                       {/* Clinical Anamnesis Question in Quotes */}

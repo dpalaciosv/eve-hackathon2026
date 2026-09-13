@@ -669,15 +669,15 @@ export default function App() {
         )}
       </main>
 
-      {/* Floating Bottom Quick Bar for Pitch / Reset */}
+      {/* Floating Bottom Quick Bar */}
       <footer className="border-t border-[#DDD4C7] bg-white/80 backdrop-blur-xs py-3 px-4 text-xs text-[#161616]/75">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-2 font-normal">
-            <span>AI Women Hackathon Hamburg</span>
-            <span>•</span>
             <span className="text-[#2B1720] font-bold">EVE — Evidence for every woman</span>
             <span>•</span>
-            <span>Powered by Gemini & Google Cloud Run</span>
+            <span>Evidenzbasierte Perimenopause-Begleitung</span>
+            <span>•</span>
+            <span>Wissenschaftlich fundiert & DSGVO-konform</span>
           </div>
 
           <div className="flex items-center gap-3">
@@ -700,13 +700,13 @@ export default function App() {
               className="text-[11px] font-normal text-[#161616]/60 hover:text-[#2B1720] transition-colors flex items-center gap-1 cursor-pointer"
             >
               <RefreshCw className="w-3 h-3" />
-              <span>Demo zurücksetzen</span>
+              <span>Eingaben zurücksetzen</span>
             </button>
             <button
               onClick={() => setIsPitchGuideOpen(true)}
               className="text-[11px] font-bold text-[#6D1835] hover:underline cursor-pointer"
             >
-              Pitch-Guide
+              Über EVE
             </button>
           </div>
         </div>

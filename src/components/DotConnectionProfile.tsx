@@ -522,7 +522,7 @@ export const DotConnectionProfile: React.FC<DotConnectionProfileProps> = ({
             </div>
             <div>
               <h3 className="font-bold text-lg text-[#2B1720]">
-                Arztgesprächs-Leitfaden (Doctor Discussion Brief)
+                Arztgesprächs-Leitfaden
               </h3>
               <p className="text-xs text-[#161616]/75 font-normal">
                 Evidenzbasierte Fragen für deine nächste gynäkologische oder allgemeinmedizinische Konsultation.

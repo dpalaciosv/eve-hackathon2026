@@ -3,17 +3,17 @@ import { UserProfile, DotConnectionHistoryItem } from '../types';
 export const DEFAULT_USER_PROFILE: UserProfile = {
   id: 'user-sarah-1',
   name: 'Sarah Müller',
-  email: 'sarah.mueller@example.de',
+  email: 'sarah.mueller@beispiel.de',
   age: 46,
   ageGroup: '45-49',
   cycleStatus: 'skipped_cycles',
   hrtStatus: 'curious_exploring',
   primaryGoals: [
-    'Restore 3 AM sleep quality',
-    'Understand brain fog vs. stress',
-    'Prepare evidence-based doctor appointment'
+    '3-Uhr-Nachts-Schlafqualität wiederherstellen',
+    'Brain Fog & Wortfindungsstörungen verstehen',
+    'Evidenzbasierte Vorbereitung für das Arztgespräch'
   ],
-  medicalNotes: 'No previous hormone treatments. Thyroid function checked 8 months ago within normal limits.',
+  medicalNotes: 'Bislang keine Hormontherapie. Schilddrüsenwerte vor 8 Monaten unauffällig.',
   avatarBg: 'from-[#8B5CF6] to-[#EC4899]',
   createdAt: '2026-06-15',
   lastActive: '2026-09-12'
@@ -24,17 +24,17 @@ export const DEMO_PROFILES: UserProfile[] = [
   {
     id: 'user-elena-2',
     name: 'Elena Becker',
-    email: 'elena.b@example.de',
+    email: 'elena.b@beispiel.de',
     age: 41,
     ageGroup: '40-44',
     cycleStatus: 'irregular_early',
     hrtStatus: 'none',
     primaryGoals: [
-      'Understand early luteal mood drops',
-      'Manage new unexplained anxiety before period',
-      'Track cycle variations'
+      'Stimmungstiefs in der zweiten Zyklushälfte einordnen',
+      'Unerklärliche Unruhe vor der Periode lindern',
+      'Frühe Zyklusschwankungen dokumentieren'
     ],
-    medicalNotes: 'Mirena IUD removed 1 year ago. Cycles now varying between 23 and 32 days.',
+    medicalNotes: 'Mirena-Spirale vor 1 Jahr entfernt. Zyklen schwanken seither zwischen 23 und 32 Tagen.',
     avatarBg: 'from-[#3B82F6] to-[#8B5CF6]',
     createdAt: '2026-07-01',
     lastActive: '2026-09-10'
@@ -42,17 +42,17 @@ export const DEMO_PROFILES: UserProfile[] = [
   {
     id: 'user-claudia-3',
     name: 'Claudia Weber',
-    email: 'claudia.w@example.de',
+    email: 'claudia.w@beispiel.de',
     age: 51,
     ageGroup: '50-54',
     cycleStatus: 'amenorrhea_recent',
     hrtStatus: 'transdermal_bioidentical',
     primaryGoals: [
-      'Evaluate transdermal estradiol efficacy',
-      'Relieve joint stiffness and frozen shoulder',
-      'Cardiovascular & bone density longevity plan'
+      'Wirkung des bioidentischen Östrogengels überprüfen',
+      'Morgendliche Gelenksteifigkeit lindern',
+      'Prävention für Knochendichte und Herz-Kreislauf aufbauen'
     ],
-    medicalNotes: 'Started transdermal estradiol 50mcg + micronized progesterone 200mg cyclically 3 months ago.',
+    medicalNotes: 'Vor 3 Monaten mit transdermalem Östradiol-Gel (50 µg) + mikronisiertem Progesteron (200 mg zyklisch) begonnen.',
     avatarBg: 'from-[#EC4899] to-[#F59E0B]',
     createdAt: '2026-05-10',
     lastActive: '2026-09-11'
@@ -71,82 +71,82 @@ export const INITIAL_CONNECTION_HISTORY: DotConnectionHistoryItem[] = [
     },
     symptomsMatchedCount: 8,
     symptomsMatchedTitles: [
-      '3 AM Sleep Fragmentation',
-      'The "Lost Word" Mid-Sentence Blank',
-      'Micro-Ignitions / Sudden Radiator Sensation',
-      '3 PM Sudden Sensory Overload',
-      'Morning "Tin-Man" Finger & Foot Stiffness',
-      'Late-Luteal Rage Surge',
-      'Heart Flutter in Bed',
-      'Sensory Odor & Sound Sensitivity'
+      'Um 3:17 Uhr hellwach',
+      'Das verschwundene Wort mitten im Satz',
+      'Der plötzliche innere Heizkörper',
+      'Explosive Reizbarkeit aus dem Nichts',
+      'Morgendliche Steifigkeit („Blechmann-Gefühl“)',
+      'Das 4-Uhr-Herzklopfen im Bett',
+      'Plötzliche Kaffee-Unverträglichkeit',
+      'Elektrisches Kribbeln auf der Haut'
     ],
     symptomsAbsentCount: 6,
     mythsAnsweredCount: 3,
-    stageSummary: 'Late Perimenopausal Transition (STRAW+10 Stage -1)',
-    confidence: '89% High Alignment',
-    dominantCategory: 'Sleep & Circadian + Neurocognitive',
-    headline: 'Progesterone Deficit with Neuro-Receptor Fluctuations',
-    userNote: 'Felt extremely exhausted after vacation; sleep was broken every night around 3:20 AM.',
+    stageSummary: 'Mittlere Perimenopause (STRAW+10 Stadium -1)',
+    confidence: '89 % Hohe Übereinstimmung',
+    dominantCategory: 'Schlaf & Biorhythmus + Kognition & Stimmung',
+    headline: 'Progesterondefizit mit neuroendokrinen Rezeptorschwankungen',
+    userNote: 'Nach dem Urlaub extrem erschöpft gefühlt; jede Nacht gegen 3:20 Uhr wach geworden.',
     assessment: {
-      headline: 'Clear Dual Axis: Circadian Clock Glitch & Neurosteroid Calibration',
-      empatheticCopy: 'Sarah, your cluster reflects the classic mid-40s progesterone decline where calming GABA-A receptor stimulation decreases, while estrogen surges trigger micro-hypothalamic resets during the early morning.',
+      headline: 'Klare Doppelachse: Zirkadiane Schlafstörung & neuronale Hormonumstellung',
+      empatheticCopy: 'Liebe Sarah, dein Symptommuster spiegelt das klassische Bild der mittleren Vierziger wider: Wenn Progesteron abfällt, fehlt die beruhigende Wirkung auf die GABA-Rezeptoren im Gehirn, während unberechenbare Östrogenspitzen das Temperatur- und Schlafzentrum im Hypothalamus vorzeitig alarmieren. Du bildest dir das nicht ein – es ist eine biologische Umstellung.',
       probabilitySummary: {
-        stage: 'Late Perimenopausal Transition (STRAW+10 Stage -1)',
-        confidence: '89% Alignment',
-        rationale: 'Marked cycle irregularity (>60 days skipped) combined with nocturnal awakenings, vasomotor thermoregulation bursts, and cognitive tip-of-tongue pauses.'
+        stage: 'Mittlere Perimenopause (STRAW+10 Stadium -1)',
+        confidence: '89 % Übereinstimmung',
+        rationale: 'Deutliche Zyklusschwankungen (über 60 Tage übersprungen) in Kombination mit nächtlichen Wachphasen, vasomotorischen Hitzeschüben und Wortfindungsstörungen.'
       },
       categoryGroupings: [
         {
-          category: 'Sleep & Circadian',
-          matchedSymptoms: ['3 AM Sleep Fragmentation', 'Heart Flutter in Bed'],
-          clinicalExplanation: 'Progesterone metabolite allopregnanolone drops abruptly, removing nocturnal GABAergic braking right when cortisol surges.',
+          category: 'Schlaf & Biorhythmus',
+          matchedSymptoms: ['Um 3:17 Uhr hellwach', 'Das 4-Uhr-Herzklopfen im Bett'],
+          clinicalExplanation: 'Der Progesteron-Metabolit Allopregnanolon sinkt nachts ab. Dadurch entfällt die natürliche neuronale Bremse genau in dem Moment, in dem die morgendliche Cortisol-Ausschüttung beginnt.',
           severityLevel: 'pronounced',
-          hormonalDriver: 'Low allopregnanolone & peak nocturnal cortisol'
+          hormonalDriver: 'Niedriges Allopregnanolon & nächtliche Cortisolspitzen'
         },
         {
-          category: 'Neurocognitive & Mood',
-          matchedSymptoms: ['The "Lost Word" Mid-Sentence Blank', 'Late-Luteal Rage Surge', '3 PM Sudden Sensory Overload'],
-          clinicalExplanation: 'Estrogen fluctuations in hippocampal and prefrontal cortex receptors temporarily downregulate cerebral glucose metabolism.',
+          category: 'Kognition & Stimmung',
+          matchedSymptoms: ['Das verschwundene Wort mitten im Satz', 'Explosive Reizbarkeit aus dem Nichts'],
+          clinicalExplanation: 'Östrogenschwankungen im Hippocampus und präfrontalen Kortex drosseln vorübergehend den zerebralen Glukosestoffwechsel und verringern die Stresstoleranz der Amygdala.',
           severityLevel: 'moderate',
-          hormonalDriver: 'Transient cerebral glucose hypo-metabolism'
+          hormonalDriver: 'Vorübergehende zerebrale Glukoseunterversorgung & Serotoninschwankungen'
         },
         {
-          category: 'Vasomotor & Thermal',
-          matchedSymptoms: ['Micro-Ignitions / Sudden Radiator Sensation'],
-          clinicalExplanation: 'KNDy neuron hyperactivity in the hypothalamus narrows the thermoneutral zone.',
+          category: 'Vasomotorik & Temperatur',
+          matchedSymptoms: ['Der plötzliche innere Heizkörper'],
+          clinicalExplanation: 'Die Überaktivität der KNDy-Neuronen im Hypothalamus verengt die Temperatur-Komfortzone und löst plötzliche Gefäßerweiterungen aus.',
           severityLevel: 'moderate',
-          hormonalDriver: 'Hypothalamic KNDy neuron pulse activation'
+          hormonalDriver: 'Hypothalamische Fehlsteuerung des Temperaturzentrums'
         }
       ],
       lifestyleRecommendations: [
         {
-          title: '3 AM Sleep Rescue Protocol',
-          timeframe: 'Tonight (1 hour before bed)',
-          action: '400mg Magnesium Bisglycinate + 3g L-Glycine + dark bedroom cooler than 19°C.',
-          scientificWhy: 'Glycine lowers core body temperature by promoting peripheral vasodilation, preventing the 3 AM thermostat alarm.',
+          title: '3-Uhr-Nachts-Schlafrettung',
+          timeframe: 'Heute Abend (60 Min vor dem Schlafen)',
+          action: '400 mg Magnesiumglycinat + 3 g L-Glycin bei kühler Raumtemperatur (unter 19 °C).',
+          scientificWhy: 'Glycin senkt die Körperkerntemperatur und verhindert zusammen mit Magnesium das vorzeitige Aufwachen im zweiten Schlafzyklus.',
           icon: 'Moon'
         },
         {
-          title: 'Morning Protein & Neuro-Anchor',
-          timeframe: 'Daily within 45 min of waking',
-          action: 'Consume 30-35g complete protein with natural choline (eggs or soy).',
-          scientificWhy: 'Provides dopamine and acetylcholine precursors needed for cognitive word-finding and stable glucose.',
+          title: 'Protein- & Nervenanker am Morgen',
+          timeframe: 'Täglich innerhalb von 45 Min nach dem Aufstehen',
+          action: '30–35 g vollwertiges Protein mit natürlichem Cholin (z. B. Eier oder Soja).',
+          scientificWhy: 'Liefert Vorstufen für Acetylcholin und Dopamin, stabilisiert den Blutzucker und verhindert Vormittagstiefs.',
           icon: 'Brain'
         },
         {
-          title: 'Parasympathetic Vagus Brake',
-          timeframe: 'When sensory overload hits',
-          action: 'Double inhale through the nose followed by prolonged audible sigh through the mouth (Physiological Sigh x 3).',
-          scientificWhy: 'Directly triggers the sinoatrial node brake, calming heart flutters and adrenaline surges.',
+          title: 'Vagusnerv-Bremse bei Stress',
+          timeframe: 'Bei aufkommender Reizbarkeit',
+          action: 'Doppeltes Einatmen durch die Nase, gefolgt von langem hörbarem Ausatmen (Physiologischer Seufzer x 3).',
+          scientificWhy: 'Aktiviert unmittelbar den Parasympathikus und senkt die Herzfrequenz bei vegetativer Übererregung.',
           icon: 'Flame'
         }
       ],
       doctorDiscussionPoints: [
-        'Could bioidentical micronized progesterone (100-200mg capsules) taken cyclically or continuously restore my sleep continuity?',
-        'Are my morning joint stiffness and heart flutters correlated with perimenopausal estrogen drops or should we run thyroid/iron panels?',
-        'Would transdermal bioidentical estradiol gel or patch be appropriate given my cycle gaps of >60 days?'
+        'Könnte mikronisiertes bioidentisches Progesteron (100–200 mg zur Nacht) die Schlafarchitektur wieder stabilisieren?',
+        'Hängen die morgendliche Gelenksteifigkeit und das Herzklopfen mit Östrogenabfällen zusammen oder sollten Schilddrüse und Ferritin zusätzlich kontrolliert werden?',
+        'Wäre angesichts der Zykluspausen von über 60 Tagen eine transdermale Hormonersatztherapie (Gel/Pflaster) sinnvoll?'
       ],
-      hormonalDotConnection: 'The common thread tying your 3 AM waking, brain fog, and sudden internal heat is not burnout or aging—it is the simultaneous down-regulation of GABA calmers and narrowing of your hypothalamic thermostat.'
+      hormonalDotConnection: 'Der gemeinsame Nenner deiner Schlafstörungen, Wortfindungsstörungen und inneren Hitze ist kein Burnout – es ist das zeitgleiche Absinken der beruhigenden GABA-Wirkung und die Verengung deines Temperaturreglers im Hypothalamus.'
     }
   },
   {
@@ -160,71 +160,71 @@ export const INITIAL_CONNECTION_HISTORY: DotConnectionHistoryItem[] = [
     },
     symptomsMatchedCount: 5,
     symptomsMatchedTitles: [
-      '3 AM Sleep Fragmentation',
-      'Morning "Tin-Man" Finger & Foot Stiffness',
-      'The "Lost Word" Mid-Sentence Blank',
-      'Sensory Odor & Sound Sensitivity',
-      'Sudden Crying Spells at Commercials'
+      'Um 3:17 Uhr hellwach',
+      'Morgendliche Steifigkeit („Blechmann-Gefühl“)',
+      'Das verschwundene Wort mitten im Satz',
+      'Elektrisches Kribbeln auf der Haut',
+      'Unerklärliche diffuse Zukunftsangst'
     ],
     symptomsAbsentCount: 9,
     mythsAnsweredCount: 2,
-    stageSummary: 'Early Perimenopausal Transition (STRAW+10 Stage -2)',
-    confidence: '78% Moderate-High',
-    dominantCategory: 'Neurocognitive & Musculoskeletal',
-    headline: 'Emerging Luteal Progesterone Shortfall',
-    userNote: 'Baseline recording. First time I realized my stiff fingers in the morning could be connected to hormones.',
+    stageSummary: 'Frühe Perimenopause (STRAW+10 Stadium -2)',
+    confidence: '78 % Moderate bis hohe Übereinstimmung',
+    dominantCategory: 'Kognition & Stimmung + Muskeln & Gelenke',
+    headline: 'Beginnender Progesteronmangel in der Gelbkörperphase',
+    userNote: 'Basis-Erfassung. Zum ersten Mal verstanden, dass die steifen Finger morgens mit den Hormonen zusammenhängen könnten.',
     assessment: {
-      headline: 'Early Endocrine Warning Signals: Progesterone Deficiency Phase',
-      empatheticCopy: 'Sarah, your initial 5 matched symptoms point toward an early phase where cycle lengths are only just beginning to vary, but estrogen withdrawal during the late cycle causes mild connective tissue inflammation and sleep fragility.',
+      headline: 'Frühe endokrine Warnsignale: Progesteron-Defizitphase',
+      empatheticCopy: 'Liebe Sarah, deine 5 bestätigten Symptome deuten auf eine frühe Phase hin, in der die Zykluslänge erst leicht schwankt, aber der Hormonabfall vor der Periode bereits zu leichten Bindegewebsreizungen und Schlafunterbrechungen führt.',
       probabilitySummary: {
-        stage: 'Early Perimenopausal Transition (STRAW+10 Stage -2)',
-        confidence: '78% Alignment',
-        rationale: 'Mild cycle shift combined with morning connective tissue stiffness and emotional responsiveness.'
+        stage: 'Frühe Perimenopause (STRAW+10 Stadium -2)',
+        confidence: '78 % Übereinstimmung',
+        rationale: 'Leichte Zyklusveränderung kombiniert mit morgendlicher Gelenksteifigkeit und emotionaler Dünnhäutigkeit.'
       },
       categoryGroupings: [
         {
-          category: 'Musculoskeletal & Body',
-          matchedSymptoms: ['Morning "Tin-Man" Finger & Foot Stiffness'],
-          clinicalExplanation: 'Estrogen acts as a natural joint chondroprotective agent; early drops lower synovial hydration.',
+          category: 'Muskeln & Gelenke',
+          matchedSymptoms: ['Morgendliche Steifigkeit („Blechmann-Gefühl“)'],
+          clinicalExplanation: 'Östrogen schützt den Knorpel und hält das Bindegewebe geschmeidig; frühe Hormonabfälle mindern die Flüssigkeitsbindung in den Gelenken.',
           severityLevel: 'mild',
-          hormonalDriver: 'Synovial estrogen receptor down-regulation'
+          hormonalDriver: 'Herabregulierung der synovialen Östrogenrezeptoren'
         },
         {
-          category: 'Neurocognitive & Mood',
-          matchedSymptoms: ['The "Lost Word" Mid-Sentence Blank', 'Sudden Crying Spells at Commercials'],
-          clinicalExplanation: 'Serotonergic sensitivity to estrogen drops in the limbic system.',
+          category: 'Kognition & Stimmung',
+          matchedSymptoms: ['Das verschwundene Wort mitten im Satz', 'Unerklärliche diffuse Zukunftsangst'],
+          clinicalExplanation: 'Erhöhte serotonerge Empfindlichkeit im limbischen System bei absinkenden Hormonspiegeln.',
           severityLevel: 'moderate',
-          hormonalDriver: 'Limbic estrogen fluctuations'
+          hormonalDriver: 'Limbische Rezeptorschwankungen'
         }
       ],
       lifestyleRecommendations: [
         {
-          title: 'Anti-Inflammatory Joint Support',
-          timeframe: 'Morning routine',
-          action: 'Gentle mobility drills and 2000mg Omega-3 (EPA/DHA) with breakfast.',
-          scientificWhy: 'Omega-3 fatty acids attenuate inflammatory cytokine production in synovial membranes.',
+          title: 'Entzündungshemmende Gelenkunterstützung',
+          timeframe: 'Morgenroutine',
+          action: 'Sanfte Dehnübungen und 2000 mg Omega-3 (EPA/DHA) zum Frühstück.',
+          scientificWhy: 'Omega-3-Fettsäuren dämpfen entzündliche Zytokine im Gelenkbereich und fördern die Beweglichkeit.',
           icon: 'Activity'
         },
         {
-          title: 'Sleep Hygiene Calibration',
-          timeframe: 'Evening',
-          action: 'Dim lights 90 min before bed, magnesium glycinate.',
-          scientificWhy: 'Boosts GABA receptor activation without grogginess.',
+          title: 'Schlafhygiene & Magnesium',
+          timeframe: 'Abend',
+          action: 'Licht 90 Min vor dem Schlafen dimmen, Magnesiumglycinat einnehmen.',
+          scientificWhy: 'Fördert die GABA-Aktivität im Gehirn ohne Benommenheit am nächsten Tag.',
           icon: 'Moon'
         },
         {
-          title: 'Emotional Self-Compassion Anchor',
-          timeframe: 'Late Luteal Days',
-          action: 'Calendar awareness of the 5 days before your period.',
-          scientificWhy: 'Cognitive reframing prevents blaming yourself for biologically mediated emotional swings.',
+          title: 'Achtsamkeitsanker für den Zyklus',
+          timeframe: 'Tage vor der Periode',
+          action: 'Die 5 Tage vor der Menstruation im Kalender markieren und Termindichte reduzieren.',
+          scientificWhy: 'Kognitive Entlastung verhindert, sich für biologisch bedingte Stimmungsschwankungen selbst zu verurteilen.',
           icon: 'Heart'
         }
       ],
       doctorDiscussionPoints: [
-        'Is my morning hand stiffness indicative of perimenopausal arthralgia or early osteoarthritis?',
-        'Should we check baseline ferritin, Vitamin D3, and TSH levels?'
+        'Ist die morgendliche Fingersteifigkeit typisch für eine menopausale Arthralgie oder sollte ein Rheuma-Ausschluss erfolgen?',
+        'Sollten Basiswerte für Ferritin, Vitamin D3 und TSH bestimmt werden?'
       ],
-      hormonalDotConnection: 'Your joint stiffness and emotional sensitivity share a root cause: fluctuating estrogen levels directly influencing cellular hydration and neurotransmitter re-uptake.'
+      hormonalDotConnection: 'Deine Gelenksteifigkeit und deine emotionale Dünnhäutigkeit haben eine gemeinsame biologische Ursache: Fluktuierendes Östrogen beeinflusst unmittelbar die Zellhydratation und die Neurotransmitterbalance.'
     }
   }
 ];

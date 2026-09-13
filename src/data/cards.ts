@@ -4,172 +4,172 @@ export const INITIAL_CARDS: SwipeCard[] = [
   {
     id: 'sym-1',
     type: 'symptom',
-    category: 'Sleep & Circadian',
-    title: 'The 3:17 AM Awakening',
-    prompt: 'Woke up at 3:17 AM wide awake, staring at the ceiling for zero identifiable reason.',
-    subtext: 'Your mind isn’t necessarily stressed about anything specific, but your body decided sleep time is completely over.',
-    clinicalCorrelation: 'Progesterone has a strong calming effect via GABA-A brain receptors. When progesterone drops precipitously in the second half of cycle, nocturnal awakenings peak between 2 and 4 AM.',
+    category: 'Schlaf & Biorhythmus',
+    title: 'Um 3:17 Uhr hellwach',
+    prompt: 'Um 3:17 Uhr plötzlich mit klopfendem Herzen aufgewacht und stundenlang die Decke angestarrt.',
+    subtext: 'Kein konkreter Grübelgrund – dein Körper hat einfach mitten in der Nacht beschlossen, dass die Schlafzeit unwiderruflich vorbei ist.',
+    clinicalCorrelation: 'Progesteron wirkt über die GABA-A-Rezeptoren im Gehirn wie ein natürliches Beruhigungsmittel. Fällt es in der zweiten Zyklushälfte abrupt ab, kommt es gehäuft zwischen 2 und 4 Uhr morgens zu plötzlichen Aufwachreaktionen.',
     icon: 'Moon',
     accentColor: '#6366F1'
   },
   {
     id: 'sym-2',
     type: 'symptom',
-    category: 'Neurocognitive & Mood',
-    title: 'The Mid-Sentence Blank',
-    prompt: 'Walking into a room or pausing mid-sentence because a common everyday word vanished from your brain.',
-    subtext: 'You know what you want to say, but the vocabulary shelf just went temporarily offline.',
-    clinicalCorrelation: 'Estrogen acts as a key neuro-protective agent promoting glucose metabolism in the hippocampus and prefrontal cortex. Fluctuation temporarily slows verbal memory retrieval.',
+    category: 'Kognition & Stimmung',
+    title: 'Das verschwundene Wort mitten im Satz',
+    prompt: 'Mitten im Gespräch gestoppt, weil ein alltägliches Wort wie vom Erdboden verschwunden war.',
+    subtext: 'Du weißt genau, was du sagen willst, aber der mentale Zugriff ist für zehn Sekunden komplett blockiert.',
+    clinicalCorrelation: 'Östrogen fördert die Glukoseaufnahme und Neuroplastizität im Hippocampus und präfrontalen Kortex. Hormonschwankungen verlangsamen vorübergehend den verbalen Wortabruf (Brain Fog).',
     icon: 'Brain',
     accentColor: '#8B5CF6'
   },
   {
     id: 'myth-1',
     type: 'myth_buster',
-    statement: 'MYTH OR FACT: A single routine blood test (like FSH) can confirm or rule out whether you are in perimenopause.',
+    statement: 'MYTHOS ODER FAKT: Ein einzelner Routine-Bluttest (wie FSH) kann zuverlässig bestätigen oder ausschließen, ob du in der Perimenopause bist.',
     isFact: false,
-    badgeText: 'Diagnostic Reality',
-    explanation: 'MYTH! In perimenopause, hormones fluctuate erratically from day to day and even hour to hour. A "normal" blood test at 9:00 AM does not rule out perimenopause.',
-    clinicalReality: 'Leading medical societies (NAMS, NICE, IMS) explicitly advise against routine hormonal blood testing for women over 45 because symptoms and clinical history are the gold standard.',
-    sources: ['NICE Guidelines NG23', 'North American Menopause Society (NAMS)']
+    badgeText: 'Diagnostik-Realität',
+    explanation: 'MYTHOS! In der Perimenopause schwanken die Hormonspiegel von Tag zu Tag und sogar von Stunde zu Stunde. Ein scheinbar unauffälliger Blutwert am Morgen schließt eine Perimenopause keineswegs aus.',
+    clinicalReality: 'Führende gynäkologische Leitlinien (NAMS, NICE, IMS, DGGG) raten bei Frauen ab 45 ausdrücklich von routinemäßigen Hormon-Bluttests ab: Die klinische Symptomatik und der Zyklusverlauf sind der Goldstandard.',
+    sources: ['NICE Guidelines NG23', 'North American Menopause Society (NAMS)', 'DGGG']
   },
   {
     id: 'sym-3',
     type: 'symptom',
-    category: 'Vasomotor & Thermal',
-    title: 'The Sudden Internal Furnace',
-    prompt: 'Felt like someone secretly turned a radiator inside your chest to 100°C for 90 seconds.',
-    subtext: 'Not just being warm — an internal tidal wave of heat that rises up your neck and makes you want to tear your clothes off.',
-    clinicalCorrelation: 'Estrogen fluctuations narrow the "thermoneutral zone" in the hypothalamus. The body triggers emergency vasodilation for microscopic temperature changes.',
+    category: 'Vasomotorik & Temperatur',
+    title: 'Der plötzliche innere Heizkörper',
+    prompt: 'Als hätte jemand heimlich in deiner Brust einen Radiator auf 100 °C für 90 Sekunden hochgedreht.',
+    subtext: 'Nicht einfach ein warmes Gefühl, sondern eine plötzliche Hitzewelle, die den Hals hinaufsteigt und dich am liebsten die Kleidung vom Leib reißen ließe.',
+    clinicalCorrelation: 'Östrogenschwankungen verengen die thermostatische Komfortzone im Hypothalamus. Der Körper leitet schon bei kleinsten Temperaturschwankungen eine Notfall-Gefäßerweiterung ein.',
     icon: 'Flame',
     accentColor: '#EF4444'
   },
   {
     id: 'sym-4',
     type: 'symptom',
-    category: 'Neurocognitive & Mood',
-    title: 'Zero-To-Sixty Rage Spikes',
-    prompt: 'Sudden surge of unprovoked irritation because someone breathed or chewed near you.',
-    subtext: 'A lightning bolt of rage that feels totally disproportionate, followed 10 minutes later by guilt and confusion.',
-    clinicalCorrelation: 'Estrogen directly modulates serotonin synthesis and dopamine receptors in the amygdala. Rapid drops lower frustration thresholds before conscious regulation kicks in.',
+    category: 'Kognition & Stimmung',
+    title: 'Explosive Reizbarkeit aus dem Nichts',
+    prompt: 'Ein plötzlicher Wutanfall, nur weil jemand neben dir geatmet, getippt oder gekaut hat.',
+    subtext: 'Ein innerer Blitz aus Wut, der sich völlig unverhältnismäßig anfühlt – gefolgt von Schuldgefühlen und Ratlosigkeit zehn Minuten später.',
+    clinicalCorrelation: 'Östrogen moduliert die Serotoninsynthese und die Dopaminrezeptoren in der Amygdala. Schnelle Abfälle senken die Reizschwelle, bevor die bewusste Selbstregulation greifen kann.',
     icon: 'Zap',
     accentColor: '#F59E0B'
   },
   {
     id: 'myth-2',
     type: 'myth_buster',
-    statement: 'MYTH OR FACT: Perimenopause only starts when your periods become irregular or stop completely.',
+    statement: 'MYTHOS ODER FAKT: Die Perimenopause beginnt erst dann, wenn die Periode unregelmäßig wird oder ganz ausbleibt.',
     isFact: false,
-    badgeText: 'Onset Timeline',
-    explanation: 'MYTH! Perimenopause often starts 4 to 8 years before cycles become irregular. Sleep changes, mood fluctuations, and anxiety spikes often appear while periods are still like clockwork.',
-    clinicalReality: 'In early perimenopause, cycle lengths may even temporarily shorten (e.g. from 28 down to 23 days) due to accelerated follicular phases before they start skipping.',
-    sources: ['Endocrine Society Clinical Guidelines', 'The Lancet Women’s Health']
+    badgeText: 'Beginn & Zeitachse',
+    explanation: 'MYTHOS! Die Perimenopause beginnt oft 4 bis 8 Jahre vor den ersten sichtbaren Zyklusunregelmäßigkeiten. Schlafstörungen, Stimmungsschwankungen und diffuse Ängste treten häufig bei pünktlichem Zyklus auf.',
+    clinicalReality: 'In der frühen Perimenopause können sich Zyklen anfangs sogar verkürzen (z. B. von 28 auf 23 Tage), da die Follikelphase beschleunigt abläuft, bevor Zyklen übersprungen werden.',
+    sources: ['Endocrine Society Guidelines', 'The Lancet Women’s Health']
   },
   {
     id: 'sym-5',
     type: 'symptom',
-    category: 'Musculoskeletal & Body',
-    title: 'Morning Tin Man Stiffness',
-    prompt: 'Getting out of bed feeling stiff, like you ran an ultramarathon overnight when all you did was sleep.',
-    subtext: 'Fingers, lower back, or Achilles tendons take 20 minutes of gentle hobbling just to lubricate and move smoothly.',
-    clinicalCorrelation: 'Estrogen has potent anti-inflammatory properties and maintains collagen hydration in joint cartilage and synovial fluid. Estrogen dips manifest as "menopausal arthralgia".',
+    category: 'Muskeln & Gelenke',
+    title: 'Morgendliche Steifigkeit („Blechmann-Gefühl“)',
+    prompt: 'Morgens aus dem Bett aufgestanden und sich gefühlt, als wäre man über Nacht einen Marathon gelaufen.',
+    subtext: 'Finger, Fußgelenke oder die Lendenwirbelsäule brauchen 20 Minuten sanfte Bewegung, um überhaupt wieder geschmeidig zu funktionieren.',
+    clinicalCorrelation: 'Östrogen wirkt entzündungshemmend und bindet Feuchtigkeit im Kollagen der Gelenkknorpel und der Gelenkflüssigkeit. Hormonabfälle äußern sich als typische menopausale Arthralgie.',
     icon: 'Activity',
     accentColor: '#10B981'
   },
   {
     id: 'sym-6',
     type: 'symptom',
-    category: 'Sleep & Circadian',
-    title: 'The 4:00 AM Heart Flutter',
-    prompt: 'Lying in bed and noticing your heart lightly thumping or racing like a hummingbird for 2 minutes.',
-    subtext: 'You aren’t having a panic attack, but your cardiovascular system decided to sound a miniature alarm in the dark.',
-    clinicalCorrelation: 'Nocturnal cortisol micro-surges coupled with autonomic nervous system instability cause benign palpitations when nighttime estrogen and progesterone dip.',
+    category: 'Schlaf & Biorhythmus',
+    title: 'Das 4-Uhr-Herzklopfen im Bett',
+    prompt: 'Im Bett gelegen und bemerkt, wie das Herz plötzlich für zwei Minuten wie ein Kolibri flattert oder pocht.',
+    subtext: 'Keine Panikattacke, sondern das vegetative Nervensystem, das mitten in der Nacht grundlos Alarm schlägt.',
+    clinicalCorrelation: 'Nächtliche Cortisol-Mikrospitzen gepaart mit vegetativer Dysbalance bei sinkenden Östrogen- und Progesteronwerten lösen harmlose Extrasystolen und Palpitationen aus.',
     icon: 'HeartPulse',
     accentColor: '#EC4899'
   },
   {
     id: 'myth-3',
     type: 'myth_buster',
-    statement: 'MYTH OR FACT: Progesterone drops up to 75% faster than estrogen in the early stages of perimenopause.',
+    statement: 'MYTHOS ODER FAKT: Progesteron fällt in der frühen Perimenopause oft bis zu 75 % schneller ab als Östrogen.',
     isFact: true,
-    badgeText: 'Hormonal Dynamics',
-    explanation: 'FACT! Anovulatory cycles (cycles where no egg is released) mean the corpus luteum does not form, leading to near-zero progesterone production while estrogen surges wildly.',
-    clinicalReality: 'This "unopposed estrogen" state is why women often experience sore breasts, fluid retention, heavy periods, and acute insomnia in their early 40s.',
-    sources: ['Jerilynn Prior, Centre for Menstrual Cycle and Ovulation Research']
+    badgeText: 'Hormondynamik',
+    explanation: 'FAKT! Bei anovulatorischen Zyklen (ohne Eisprung) bildet sich kein Gelbkörper. Die Progesteronproduktion sinkt drastisch, während Östrogen phasenweise ungebremst hoch bleibt.',
+    clinicalReality: 'Diese sogenannte Östrogendominanz erklärt, warum Frauen Anfang 40 häufig unter Brustspannen, Wassereinlagerungen, starken Blutungen und Schlafproblemen leiden.',
+    sources: ['Prof. Jerilynn Prior, Centre for Menstrual Cycle and Ovulation Research']
   },
   {
     id: 'sym-7',
     type: 'symptom',
-    category: 'Metabolic & Hormonal',
-    title: 'The Coffee Sensitivity Shift',
-    prompt: 'Your beloved morning espresso suddenly triggers jitters, stomach acid, or wired anxiety out of nowhere.',
-    subtext: 'You’ve drank coffee for 15 years with zero problems, but suddenly your liver and nervous system treat it with hostility.',
-    clinicalCorrelation: 'Estrogen enzymes (CYP1A2) in the liver process caffeine. Hormonal fluctuations change caffeine clearance half-life, making stimulants linger up to 4x longer.',
+    category: 'Stoffwechsel & Hormone',
+    title: 'Plötzliche Kaffee-Unverträglichkeit',
+    prompt: 'Der geliebte Morgenkaffee sorgt plötzlich für Zittrigkeit, Magensäure oder innere Unruhe.',
+    subtext: 'Du hast 15 Jahre lang problemlos Kaffee getrunken – jetzt reagiert dein Körper plötzlich überempfindlich auf Koffein.',
+    clinicalCorrelation: 'Östrogen-regulierte Leberenzyme (CYP1A2) bauen Koffein ab. Hormonschwankungen verlängern die Halbwertszeit von Koffein, sodass Stimulanzien bis zu viermal länger im Körper zirkulieren.',
     icon: 'Coffee',
     accentColor: '#D97706'
   },
   {
     id: 'sym-8',
     type: 'symptom',
-    category: 'Neurocognitive & Mood',
-    title: 'The Free-Floating Imposter Anxiety',
-    prompt: 'Waking up with a pit in your stomach or sudden dread about tasks you normally do with your eyes closed.',
-    subtext: 'A nagging sensation that "you can’t handle things anymore", even though nothing in your external workload changed.',
-    clinicalCorrelation: 'Progesterone metabolite allopregnanolone is the body’s natural Valium. Its steep withdrawal reduces GABA receptor sensitivity, generating unexplained panic or dread.',
+    category: 'Kognition & Stimmung',
+    title: 'Unerklärliche diffuse Zukunftsangst',
+    prompt: 'Mit einem Kloß im Magen oder plötzlicher Angst vor alltäglichen Aufgaben aufgewacht, die du sonst im Schlaf meisterst.',
+    subtext: 'Ein nagendes Gefühl der Überforderung, obwohl sich an deinen äußeren Lebensumständen nichts geändert hat.',
+    clinicalCorrelation: 'Der Progesteron-Metabolit Allopregnanolon ist das körpereigene Beruhigungsmittel. Sinkende Spiegel reduzieren die Reizschwelle der GABA-Rezeptoren und erzeugen unerklärliche Beklemmungen.',
     icon: 'ShieldAlert',
     accentColor: '#6366F1'
   },
   {
     id: 'sym-9',
     type: 'symptom',
-    category: 'Metabolic & Hormonal',
-    title: 'The Mystery Midsection Shift',
-    prompt: 'Favorite jeans feel uncomfortably tight around the waistband, even though your diet and exercise didn’t budge.',
-    subtext: 'It feels like your body composition is quietly relocating fat to your abdomen overnight without your permission.',
-    clinicalCorrelation: 'Declining estrogen shifts the balance toward androgen dominance, redirecting subcutaneous fat storage toward visceral abdominal receptors and altering insulin sensitivity.',
+    category: 'Stoffwechsel & Hormone',
+    title: 'Die rätselhafte Taillenverschiebung',
+    prompt: 'Die Lieblingsjeans sitzt am Hosenbund plötzlich spürbar enger, obwohl Ernährung und Bewegung unverändert sind.',
+    subtext: 'Es fühlt sich an, als würde der Körper Fettreserven heimlich und über Nacht an den Bauchraum umlagern.',
+    clinicalCorrelation: 'Sinkendes Östrogen verschiebt das Verhältnis zu Androgenen. Fettgewebe wird vermehrt viszeral im Bauchbereich eingelagert, während sich gleichzeitig die Insulinsensitivität verändert.',
     icon: 'Sparkles',
     accentColor: '#14B8A6'
   },
   {
     id: 'sym-10',
     type: 'symptom',
-    category: 'Musculoskeletal & Body',
-    title: 'The Phantom Electric Tingles',
-    prompt: 'Strange sensations on your skin — itching, tingling, or feeling like tiny insects are walking on your arms ("formication").',
-    subtext: 'You look down, scratch your arm, and there is nothing there — just nerve hypersensitivity.',
-    clinicalCorrelation: 'Collagen thinning and neurovascular skin receptor instability during estrogen decline produce paresthesias and pruritus in up to 20% of women.',
+    category: 'Muskeln & Gelenke',
+    title: 'Elektrisches Kribbeln auf der Haut',
+    prompt: 'Merkwürdige Empfindungen auf der Haut – Juckreiz, Kribbeln oder das Gefühl, als würden Ameisen über die Arme laufen.',
+    subtext: 'Du schaust hin, kratzt dich, aber da ist nichts – reine Übererregbarkeit der kutanen Nervenfasern.',
+    clinicalCorrelation: 'Kollagenverlust und neurovaskuläre Instabilität während des Östrogenabfalls führen bei bis zu 20 % der Frauen zu Parästhesien und Formikation (Ameisenlaufen).',
     icon: 'Feather',
     accentColor: '#A855F7'
   },
   {
     id: 'myth-4',
     type: 'myth_buster',
-    statement: 'MYTH OR FACT: Lifestyle interventions cannot alter the neurobiology of perimenopausal hot flashes or sleep disruptions.',
+    statement: 'MYTHOS ODER FAKT: Lebensstil-Maßnahmen können neurobiologische Hitzewallungen und Schlaflosigkeit nicht spürbar lindern.',
     isFact: false,
-    badgeText: 'Evidence-Based Action',
-    explanation: 'MYTH! Clinical trials show that targeted lifestyle protocols (strength training, non-sleep deep rest, temperature regulation, and protein pacing) significantly reduce symptom severity.',
-    clinicalReality: 'Resistance training improves autonomic tone and downregulates visceral inflammation, while magnesium glycinate and glycine improve deep slow-wave sleep architecture.',
+    badgeText: 'Evidenzbasierte Praxis',
+    explanation: 'MYTHOS! Klinische Studien belegen, dass gezielte Maßnahmen (Krafttraining, Temperaturregulierung, Proteintiming und Entspannungsverfahren) die Symptomlast messbar senken.',
+    clinicalReality: 'Progressives Krafttraining stärkt den vegetativen Tonus und dämpft viszerale Entzündungen; Magnesiumglycinat und Glycin unterstützen die Tiefschlafarchitektur nachweislich.',
     sources: ['European Menopause and Andropause Society (EMAS)', 'JAMA Internal Medicine']
   },
   {
     id: 'sym-11',
     type: 'symptom',
-    category: 'Vasomotor & Thermal',
-    title: 'The 4 AM Cold Shiver Drench',
-    prompt: 'Waking up drenched in sweat, followed immediately by violently shivering under three blankets.',
-    subtext: 'Tossing off the duvet in a burning panic, then 60 seconds later shivering because your damp shirt feels like ice.',
-    clinicalCorrelation: 'The hypothalamic cooling rebound overcompensates after a hot flash vasodilation, dropping core body temperature and triggering rapid shivering.',
+    category: 'Vasomotorik & Temperatur',
+    title: 'Der schweißgebadete Kältezittern-Schub',
+    prompt: 'Nassgeschwitzt aufgewacht und unmittelbar danach unter drei Decken am ganzen Körper vor Kälte gezittert.',
+    subtext: 'Erst die Decke in Hektik weggestrampelt – und 60 Sekunden später gezittert, weil das feuchte T-Shirt eiskalt am Rücken klebt.',
+    clinicalCorrelation: 'Die hypothalamische Abkühlungsreaktion überkompensiert nach einer Hitzewallung: Die Kerntemperatur sinkt rasch ab, was sofortiges reflektorisches Kältezittern auslöst.',
     icon: 'Wind',
     accentColor: '#3B82F6'
   },
   {
     id: 'sym-12',
     type: 'symptom',
-    category: 'Metabolic & Hormonal',
-    title: 'Cycle Roulette',
-    prompt: 'Periods playing hide-and-seek: 23 days one cycle, 41 days the next, then a random surprise spotting episode.',
-    subtext: 'You have zero idea when to pack menstrual products, and tracking apps keep getting confused.',
-    clinicalCorrelation: 'Follicular depletion leads to inconsistent follicular maturation, alternating between high estrogen cycles and delayed anovulatory intervals.',
+    category: 'Stoffwechsel & Hormone',
+    title: 'Zyklus-Roulette',
+    prompt: 'Die Periode spielt Verstecken: Mal nach 23 Tagen, mal nach 41 Tagen, dazwischen unerwartete Schmierblutungen.',
+    subtext: 'Man weiß nie, wann man Menstruationsprodukte dabeihaben muss, und Perioden-Apps liegen ständig daneben.',
+    clinicalCorrelation: 'Die nachlassende Follikelreserve führt zu unregelmäßiger Follikelreifung mit einem Wechsel aus östrogenreichen Zyklen und verzögerten Zyklen ohne Eisprung.',
     icon: 'Calendar',
     accentColor: '#EC4899'
   }
@@ -178,9 +178,9 @@ export const INITIAL_CARDS: SwipeCard[] = [
 export const INITIAL_BADGES: ValidationBadge[] = [
   {
     id: 'badge-1',
-    title: 'Self-Advocate Novice',
-    subtitle: 'First 5 Swipes Completed',
-    description: 'You took the first courageous step to catalog your real bodily signals without brushing them off.',
+    title: 'Erste Schritte',
+    subtitle: '5 Symptom-Karten bewertet',
+    description: 'Du hast den ersten mutigen Schritt gemacht, deine realen Körpersignale wahrzunehmen, statt sie abzutun.',
     icon: 'Sparkles',
     isUnlocked: false,
     progressCurrent: 0,
@@ -188,9 +188,9 @@ export const INITIAL_BADGES: ValidationBadge[] = [
   },
   {
     id: 'badge-2',
-    title: 'The Dot Connector',
-    subtitle: '10 Symptoms Matched',
-    description: 'You reached the critical threshold! The constellation between your brain, hormones, and nervous system is revealed.',
+    title: 'Muster-Finderin',
+    subtitle: '10 Symptome bestätigt',
+    description: 'Kritischer Schwellenwert erreicht! Das hormonelle Netzwerk zwischen Gehirn, Nerven und Stoffwechsel wird sichtbar.',
     icon: 'GitCommit',
     isUnlocked: false,
     progressCurrent: 0,
@@ -198,9 +198,9 @@ export const INITIAL_BADGES: ValidationBadge[] = [
   },
   {
     id: 'badge-3',
-    title: 'Myth Slayer',
-    subtitle: 'Cracked 3 Medical Myths',
-    description: 'You demolished outdated medical myths with peer-reviewed endocrinological facts.',
+    title: 'Mythos-Bezwingerin',
+    subtitle: '3 medizinische Mythen aufgeklärt',
+    description: 'Du hast veraltete Menopause-Mythen mit fundierten wissenschaftlichen Fakten entkräftet.',
     icon: 'ShieldCheck',
     isUnlocked: false,
     progressCurrent: 0,
@@ -208,9 +208,9 @@ export const INITIAL_BADGES: ValidationBadge[] = [
   },
   {
     id: 'badge-4',
-    title: 'Full Spectrum Explorer',
-    subtitle: 'Explored All 5 Symptom Domains',
-    description: 'You checked across sleep, cognition, vasomotor, musculoskeletal, and metabolism.',
+    title: 'Ganzheitliche Entdeckerin',
+    subtitle: 'Alle 5 Symptombereiche erkundet',
+    description: 'Du hast Signale aus Schlaf, Kognition, Temperatur, Muskeln und Stoffwechsel erfasst.',
     icon: 'Compass',
     isUnlocked: false,
     progressCurrent: 0,
@@ -218,9 +218,9 @@ export const INITIAL_BADGES: ValidationBadge[] = [
   },
   {
     id: 'badge-5',
-    title: 'Empowered Patient',
-    subtitle: 'Doctor Brief Generated',
-    description: 'Equipped with evidence-based data and high-yield questions for your next clinical consultation.',
+    title: 'Souveräne Patientin',
+    subtitle: 'Arzt-Briefing erstellt',
+    description: 'Bestens vorbereitet mit konkreten Daten und gezielten Fragen für dein nächstes medizinisches Gespräch.',
     icon: 'Stethoscope',
     isUnlocked: false,
     progressCurrent: 0,
@@ -231,134 +231,134 @@ export const INITIAL_BADGES: ValidationBadge[] = [
 export const INITIAL_TOOLKITS: LifestyleToolkit[] = [
   {
     id: 'toolkit-sleep',
-    title: '3 AM Sleep Rescue Protocol',
-    badge: 'Sleep & Circadian',
+    title: '3-Uhr-Nachts-Schlafrettungsprotokoll',
+    badge: 'Schlaf & Biorhythmus',
     icon: 'Moon',
-    targetCategory: 'Sleep & Circadian',
+    targetCategory: 'Schlaf & Biorhythmus',
     unlockThreshold: 3,
     isUnlocked: false,
-    tagline: 'How to bypass 3 AM GABA receptor drops and soothe nighttime cortisol micro-surges.',
+    tagline: 'Wie du nächtliche Progesteron-Tiefs abfederst und Cortisolspitzen beruhigst.',
     protocolSteps: [
       {
-        timing: '1 Hour Before Bed',
-        action: '400mg Magnesium Glycinate + 3g Glycine',
-        scientificReason: 'Magnesium acts as an NMDA receptor antagonist and GABA agonist; glycine lowers core body temperature to facilitate deeper stage 3 slow-wave sleep.'
+        timing: '60 Minuten vor dem Schlafen',
+        action: '300–400 mg Magnesiumglycinat + 3 g Glycin',
+        scientificReason: 'Magnesium wirkt als GABA-Agonist im Gehirn; Glycin senkt die Körperkerntemperatur und fördert den erholsamen Tiefschlaf.'
       },
       {
-        timing: 'Bedtime',
-        action: 'Cool Room to 18°C (65°F) & Breathable Linen',
-        scientificReason: 'Hypothalamic sensitivity increases at night. A cool ambient environment prevents premature vasomotor trigger thresholds.'
+        timing: 'Beim Zubettgehen',
+        action: 'Schlafzimmertemperatur auf 17–19 °C kühlen & atmungsaktive Naturfasern nutzen',
+        scientificReason: 'Die hypothalamische Reizschwelle steigt bei kühler Umgebung, was nächtlichen Hitzewallungen vorbeugt.'
       },
       {
-        timing: 'If Awake at 3 AM',
-        action: '10-Minute Non-Sleep Deep Rest (NSDR) / Yoga Nidra',
-        scientificReason: 'Do NOT check the clock or look at blue light. Lying still with prolonged exhales activates the parasympathetic vagal brake.'
+        timing: 'Beim Aufwachen um 3 Uhr',
+        action: '10 Minuten physiologisches Seufzen oder Yoga Nidra (NSDR) im Liegen',
+        scientificReason: 'Kein Blick auf den Wecker oder das Smartphone. Ruhiges Atmen mit verlängerter Ausatmung aktiviert den beruhigenden Parasympathikus.'
       }
     ],
     quickChecklist: [
-      'Stop caffeine by 11:00 AM',
-      'Dim overhead lights 90 mins before bed',
-      'Keep an ice roller or cooling mist on nightstand'
+      'Koffein spätestens um 12:00 Uhr mittags beenden',
+      'Deckenlicht 90 Minuten vor dem Schlafen dimmen',
+      'Kühlenden Raumspray oder Eisroller am Nachttisch bereithalten'
     ],
-    keySupplementOrFood: 'Magnesium Glycinate + Chamomile / Apigenin tea'
+    keySupplementOrFood: 'Magnesiumglycinat + Kamillen- oder Passionsblumentee'
   },
   {
     id: 'toolkit-vasomotor',
-    title: 'Thermoregulation & Hot Flash First-Aid',
-    badge: 'Thermal Comfort',
+    title: 'Thermoregulation & Hitzewallungs-Soforthilfe',
+    badge: 'Temperatur & Gefäße',
     icon: 'Flame',
-    targetCategory: 'Vasomotor & Thermal',
+    targetCategory: 'Vasomotorik & Temperatur',
     unlockThreshold: 5,
     isUnlocked: false,
-    tagline: 'Resetting the hypothalamic thermostat when estrogen drops trigger false heat alarms.',
+    tagline: 'Den Hypothalamus beruhigen, wenn Hormonschwankungen Fehlalarme im Temperaturzentrum auslösen.',
     protocolSteps: [
       {
-        timing: 'At First Sign of Heat Surge',
-        action: '4-7-8 Parasympathetic Reset Breathing',
-        scientificReason: 'Inhale through nose for 4s, hold for 7s, exhale through mouth for 8s. Interrupts the sympathetic adrenaline cascade that amplifies hot flushes.'
+        timing: 'Beim ersten Anzeichen einer Hitzewelle',
+        action: '4-7-8 Atemtechnik zur parasympathischen Entlastung',
+        scientificReason: '4 Sekunden durch die Nase einatmen, 7 Sekunden halten, 8 Sekunden durch den Mund ausatmen. Dämpft die Adrenalinausschüttung.'
       },
       {
-        timing: 'Throughout the Day',
-        action: 'Layered Natural Fibers (Merino, Bamboo, Cotton)',
-        scientificReason: 'Allows rapid thermal shedding without the rebound shivering caused by trapped synthetic moisture.'
+        timing: 'Im Tagesverlauf',
+        action: 'Kleidung im Zwiebel-Look aus Naturfasern (Merino, Seide, Baumwolle, Modal)',
+        scientificReason: 'Ermöglicht sofortige Temperaturabgabe ohne Kältezittern durch feuchte Synthetikstoffe.'
       },
       {
-        timing: 'Dinner & Evening',
-        action: 'Cap Wine and High-Histamine Foods',
-        scientificReason: 'Alcohol and aged cheeses cause cutaneous vasodilation and spike nighttime body temperature.'
+        timing: 'Am Abend',
+        action: 'Alkohol und histaminreiche Speisen reduzieren',
+        scientificReason: 'Alkohol erweitert die Blutgefäße und treibt die nächtliche Kerntemperatur unbemerkt in die Höhe.'
       }
     ],
     quickChecklist: [
-      'Carry portable rechargeable mini-fan',
-      'Drink cold electrolyte water upon waking',
-      'Track hot flash triggers in correlation with sugar/wine'
+      'Kompakten Handventilator in der Tasche tragen',
+      'Morgens direkt ein Glas kaltes Wasser mit einer Prise Meersalz trinken',
+      'Hitzeschübe kurz im Notizbuch vermerken (Zusammenhang mit Kaffee/Zucker)'
     ],
-    keySupplementOrFood: 'Electrolyte minerals (Sodium, Potassium, Magnesium)'
+    keySupplementOrFood: 'Elektrolyte (Kalium, Natrium, Magnesium)'
   },
   {
     id: 'toolkit-metabolism',
-    title: 'Metabolic & Satiety Pacing Blueprint',
-    badge: 'Metabolism',
+    title: 'Stoffwechsel- & Muskelschutz-Leitfaden',
+    badge: 'Stoffwechsel & Kraft',
     icon: 'Sparkles',
-    targetCategory: 'Metabolic & Hormonal',
+    targetCategory: 'Stoffwechsel & Hormone',
     unlockThreshold: 7,
     isUnlocked: false,
-    tagline: 'Stabilizing blood sugar and preserving lean muscle mass against estrogen-induced insulin resistance.',
+    tagline: 'Den Blutzuckerspiegel stabilisieren und wertvolle Muskelmasse gegen hormonelle Insulinresistenz schützen.',
     protocolSteps: [
       {
-        timing: 'Within 60 Mins of Waking',
-        action: '30g High-Quality Protein Breakfast',
-        scientificReason: 'Prevents cortisol-driven morning glucose spikes, protects muscle protein synthesis, and stimulates satiety hormone GLP-1.'
+        timing: 'Innerhalb von 60 Minuten nach dem Aufstehen',
+        action: 'Frühstück mit mindestens 30 g hochwertigem Eiweiß',
+        scientificReason: 'Puffert den morgendlichen Cortisolanstieg ab, verhindert Heißhungerattacken und regt die Muskelproteinsynthese an.'
       },
       {
-        timing: '3x Weekly',
-        action: 'Progressive Strength & Resistance Training',
-        scientificReason: 'Replaces passive cardio with muscle building to reverse the age-related drop in resting metabolic rate and improve insulin sensitivity.'
+        timing: '2–3 Mal pro Woche',
+        action: 'Gezieltes Krafttraining mit progressiven Gewichten',
+        scientificReason: 'Muskelmasse ist das wichtigste Stoffwechselorgan zur Aufrechterhaltung der Insulinsensitivität und des Grundumsatzes.'
       },
       {
-        timing: 'After Meals',
-        action: '10-Minute Brisk Walk',
-        scientificReason: 'Uses GLUT4 non-insulin glucose transporters to clear post-meal blood sugar surges into muscle cells.'
+        timing: 'Nach den Hauptmahlzeiten',
+        action: '10–15 Minuten zügiger Verdauungsspaziergang',
+        scientificReason: 'Aktiviert GLUT4-Glukosetransporter ohne Insulinausschüttung und glättet Blutzuckerspitzen sofort.'
       }
     ],
     quickChecklist: [
-      'Aim for 1.2g - 1.6g protein per kg body weight daily',
-      'Swap chronic high-intensity cardio for lifting heavy things',
-      'Prioritize soluble fiber (chia, flaxseed, oats) for estrogen clearance'
+      'Täglich 1,2–1,6 g Protein pro Kilogramm Körpergewicht anstreben',
+      'Exzessives Ausdauertraining durch Kraftübungen ersetzen',
+      'Lösliche Ballaststoffe (Chiasamen, Leinsamen, Hafer) zur Östrogenbalance integrieren'
     ],
-    keySupplementOrFood: 'Whey / Pea Protein + Ground Flaxseeds (lignans for phytoestrogen balance)'
+    keySupplementOrFood: 'Geschrotete Leinsamen (Lignane als Phytoöstrogene) + Molken- oder Erbsenprotein'
   },
   {
     id: 'toolkit-brain',
-    title: 'Brain Fog & Nervous System Anchor',
-    badge: 'Cognitive Health',
+    title: 'Brain Fog & Nervensystem-Anker',
+    badge: 'Kognition & Fokus',
     icon: 'Brain',
-    targetCategory: 'Neurocognitive & Mood',
+    targetCategory: 'Kognition & Stimmung',
     unlockThreshold: 9,
     isUnlocked: false,
-    tagline: 'Rewiring focus, lowering unprovoked cortisol surges, and quieting the anxious amygdala.',
+    tagline: 'Den mentalen Fokus stärken, Reizüberflutung stoppen und die überaktive Amygdala beruhigen.',
     protocolSteps: [
       {
-        timing: 'Morning Work Block',
-        action: 'Singletasking & External Brain Dump',
-        scientificReason: 'Working memory capacity temporarily contracts under fluctuating estrogen. Writing checklists eliminates cognitive friction.'
+        timing: 'Vormittags bei der Arbeit',
+        action: 'Monotasking & schriftliche Gedankenentlastung („Brain Dump“)',
+        scientificReason: 'Das Arbeitsgedächtnis leidet unter Östrogenschwankungen. Klare Listen nehmen kognitiven Druck aus dem Alltag.'
       },
       {
-        timing: 'Midday Slump (2 PM)',
-        action: '5-Minute Cold Water Face Splash + Sunlight Break',
-        scientificReason: 'Stimulates the mammalian dive reflex via trigeminal nerve, restoring alertness without caffeine.'
+        timing: 'Beim Nachmittagstief (gegen 14 Uhr)',
+        action: 'Kaltes Wasser ins Gesicht + 5 Minuten Tageslicht im Freien',
+        scientificReason: 'Aktiviert den Tauchreflex über den Nervus trigeminus und fördert die Wachheit ganz ohne zusätzlichen Kaffee.'
       },
       {
-        timing: 'During Sudden Rage Spikes',
-        action: 'Physiological Sigh (Two Inhales, Long Exhale)',
-        scientificReason: 'Re-inflates collapsed pulmonary alveoli and immediately slows heart rate via vagal stimulation.'
+        timing: 'Bei plötzlicher Wut oder Überforderung',
+        action: 'Physiologischer Seufzer (zweimal kurz einatmen, lang ausatmen)',
+        scientificReason: 'Entfaltet kollabierte Lungenbläschen und verlangsamt reflektorisch die Herzfrequenz über den Vagusnerv.'
       }
     ],
     quickChecklist: [
-      'Use voice memos to capture fleeting ideas immediately',
-      'Normalize verbal pauses: "Hold on, downloading that word"',
-      'Omega-3 fatty acids (EPA/DHA 1000mg) for neuro-inflammation'
+      'Sprachnotizen nutzen, um flüchtige Gedanken sofort festzuhalten',
+      'Wortfindungspausen gelassen nehmen: „Mein Gehirn lädt kurz neu“',
+      'Omega-3-Fettsäuren (EPA/DHA 1000 mg) zur neurobiologischen Unterstützung'
     ],
-    keySupplementOrFood: 'Omega-3 EPA/DHA + Lion’s Mane or Phosphatidylserine'
+    keySupplementOrFood: 'Omega-3 (EPA/DHA) + Cholin oder Phosphatidylserin'
   }
 ];

@@ -3,7 +3,12 @@ export type SymptomCategory =
   | 'Neurocognitive & Mood'
   | 'Vasomotor & Thermal'
   | 'Musculoskeletal & Body'
-  | 'Metabolic & Hormonal';
+  | 'Metabolic & Hormonal'
+  | 'Schlaf & Biorhythmus'
+  | 'Kognition & Stimmung'
+  | 'Vasomotorik & Temperatur'
+  | 'Muskeln & Gelenke'
+  | 'Stoffwechsel & Hormone';
 
 export interface SymptomCard {
   id: string;
