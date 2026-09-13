@@ -1,11 +1,11 @@
 import React from 'react';
-import { Wifi, Battery, Sparkles, Layers, Award, History, User } from 'lucide-react';
+import { Wifi, Battery, Sparkles, Layers, Award, History, User, BookOpen } from 'lucide-react';
 import { EveLogo } from './EveLogo';
 
 interface MobileSimulatorFrameProps {
   children: React.ReactNode;
-  activeView: 'swipe' | 'dots' | 'toolkits';
-  onNavigate: (view: 'swipe' | 'dots' | 'toolkits') => void;
+  activeView: 'swipe' | 'checklist' | 'dots' | 'toolkits';
+  onNavigate: (view: 'swipe' | 'checklist' | 'dots' | 'toolkits') => void;
   matchesCount: number;
   unlockedToolkitsCount: number;
   onOpenHistory?: () => void;
@@ -77,7 +77,7 @@ export const MobileSimulatorFrame: React.FC<MobileSimulatorFrameProps> = ({
           </div>
 
           {/* Bottom Native Mobile Tab Bar */}
-          <div className="absolute bottom-0 inset-x-0 h-14 bg-white/95 backdrop-blur-md border-t border-[#DDD4C7] flex items-center justify-around px-4 z-30">
+          <div className="absolute bottom-0 inset-x-0 h-14 bg-white/95 backdrop-blur-md border-t border-[#DDD4C7] flex items-center justify-around px-2 z-30">
             <button
               onClick={() => onNavigate('swipe')}
               className={`flex flex-col items-center gap-0.5 text-[10px] font-bold transition-colors cursor-pointer ${
@@ -85,7 +85,17 @@ export const MobileSimulatorFrame: React.FC<MobileSimulatorFrameProps> = ({
               }`}
             >
               <Layers className={`w-4 h-4 ${activeView === 'swipe' ? 'text-[#E76F61]' : 'text-zinc-400'}`} />
-              <span>Swipen</span>
+              <span>Swiper</span>
+            </button>
+
+            <button
+              onClick={() => onNavigate('checklist')}
+              className={`flex flex-col items-center gap-0.5 text-[10px] font-bold transition-colors cursor-pointer ${
+                activeView === 'checklist' ? 'text-[#2B1720]' : 'text-[#161616]/50 hover:text-[#2B1720]'
+              }`}
+            >
+              <BookOpen className={`w-4 h-4 ${activeView === 'checklist' ? 'text-[#E76F61]' : 'text-zinc-400'}`} />
+              <span>60 Check</span>
             </button>
 
             <button
@@ -108,7 +118,7 @@ export const MobileSimulatorFrame: React.FC<MobileSimulatorFrameProps> = ({
               }`}
             >
               <Award className={`w-4 h-4 ${activeView === 'toolkits' ? 'text-[#E76F61]' : 'text-zinc-400'}`} />
-              <span>Toolkits ({unlockedToolkitsCount})</span>
+              <span>Toolkits</span>
             </button>
           </div>
 

@@ -22,7 +22,8 @@ import {
   ArrowRight,
   ChevronDown,
   ChevronUp,
-  Award
+  Award,
+  BookOpen
 } from 'lucide-react';
 import { SwipeCard } from '../types';
 
@@ -38,6 +39,7 @@ interface SwipeDeckProps {
   onGenerateMoreCards: () => void;
   isGeneratingCards: boolean;
   latestUnlockedBadge: string | null;
+  onOpenChecklist?: () => void;
 }
 
 export const SwipeDeck: React.FC<SwipeDeckProps> = ({
@@ -51,7 +53,8 @@ export const SwipeDeck: React.FC<SwipeDeckProps> = ({
   onConnectTheDots,
   onGenerateMoreCards,
   isGeneratingCards,
-  latestUnlockedBadge
+  latestUnlockedBadge,
+  onOpenChecklist
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [dragDirection, setDragDirection] = useState<'left' | 'right' | null>(null);
@@ -397,11 +400,22 @@ export const SwipeDeck: React.FC<SwipeDeckProps> = ({
                   <span>Mein Dot Connection Profil öffnen</span>
                 </button>
 
+                {onOpenChecklist && (
+                  <button
+                    type="button"
+                    onClick={onOpenChecklist}
+                    className="w-full py-2.5 bg-[#FAF6F1] hover:bg-[#EAE2D6] border border-[#DDD4C7] text-[#2B1720] font-bold text-xs rounded-xl transition-all cursor-pointer flex items-center justify-center gap-1.5"
+                  >
+                    <BookOpen className="w-3.5 h-3.5 text-[#6D1835]" />
+                    <span>Gesamte 60 Symptome Checklist ansehen</span>
+                  </button>
+                )}
+
                 <button
                   type="button"
                   onClick={onGenerateMoreCards}
                   disabled={isGeneratingCards}
-                  className="w-full py-2.5 bg-[#FAF6F1] hover:bg-[#EAE2D6] border border-[#DDD4C7] text-[#2B1720] font-bold text-xs rounded-xl transition-all cursor-pointer flex items-center justify-center gap-1.5"
+                  className="w-full py-2.5 bg-white hover:bg-[#FAF6F1] border border-[#DDD4C7] text-[#161616] font-bold text-xs rounded-xl transition-all cursor-pointer flex items-center justify-center gap-1.5"
                 >
                   <Sparkles className="w-3.5 h-3.5 text-[#6D1835]" />
                   <span>{isGeneratingCards ? 'Gemini generiert neue Karten...' : '5 weitere Karten mit Gemini generieren'}</span>
@@ -459,9 +473,24 @@ export const SwipeDeck: React.FC<SwipeDeckProps> = ({
         </button>
       </div>
 
-      <p className="text-[11px] text-[#161616]/70 font-normal mt-3 text-center">
-        Tipp: Nach rechts swipen für <strong>"Das bin ich"</strong>, nach links für <strong>"Nicht ich"</strong>
-      </p>
+      <div className="flex items-center justify-center gap-3 mt-3 text-center">
+        <p className="text-[11px] text-[#161616]/70 font-normal">
+          Tipp: Nach rechts swipen für <strong>"Das bin ich"</strong>, nach links für <strong>"Nicht ich"</strong>
+        </p>
+        {onOpenChecklist && (
+          <>
+            <span className="text-[#DDD4C7]">•</span>
+            <button
+              type="button"
+              onClick={onOpenChecklist}
+              className="text-[11px] font-bold text-[#6D1835] hover:underline cursor-pointer flex items-center gap-1"
+            >
+              <BookOpen className="w-3 h-3 text-[#E76F61]" />
+              <span>Alle 60 Symptome</span>
+            </button>
+          </>
+        )}
+      </div>
     </div>
   );
 };

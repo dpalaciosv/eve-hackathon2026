@@ -166,3 +166,27 @@ export interface DotConnectionHistoryItem {
   symptomsAbsentCards?: SwipeCard[];
 }
 
+export interface SymptomItem60 {
+  id: number;
+  categoryKey: string;
+  categoryTitle: string;
+  categoryIcon: string;
+  titleDe: string;
+  titleEn: string;
+  clinicalQuestionDe: string;
+  clinicalQuestionEn: string;
+  description: string;
+  biologicalRationale: string;
+  generalInfo: string;
+  measures: string;
+  lifestyleOptions: string;
+  supplements: string;
+  doctorConsultationWhen: string;
+  icon: string;
+  weight: number; // 1-3 point weight for the gamified index
+  factCheckVerified?: boolean;
+  factCheckSource?: string;
+}
+
+export type ChecklistSelection = Record<number, 'yes' | 'no' | 'unanswered'>;
+

@@ -8,14 +8,15 @@ import {
   Presentation,
   History,
   User,
-  ChevronDown
+  ChevronDown,
+  BookOpen
 } from 'lucide-react';
 import { UserProfile } from '../types';
 import { EveLogo } from './EveLogo';
 
 interface HeaderProps {
-  activeView: 'swipe' | 'dots' | 'toolkits';
-  onSelectView: (view: 'swipe' | 'dots' | 'toolkits') => void;
+  activeView: 'swipe' | 'checklist' | 'dots' | 'toolkits';
+  onSelectView: (view: 'swipe' | 'checklist' | 'dots' | 'toolkits') => void;
   matchesCount: number;
   matchThreshold: number;
   unlockedToolkitsCount: number;
@@ -64,7 +65,7 @@ export const Header: React.FC<HeaderProps> = ({
           <nav className="hidden md:flex items-center gap-1.5 bg-[#EAE2D6] p-1 rounded-2xl border border-[#DDD4C7]">
             <button
               onClick={() => onSelectView('swipe')}
-              className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
                 activeView === 'swipe'
                   ? 'bg-[#2B1720] text-white shadow-xs'
                   : 'text-[#161616]/75 hover:text-[#2B1720]'
@@ -75,8 +76,23 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
 
             <button
+              onClick={() => onSelectView('checklist')}
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                activeView === 'checklist'
+                  ? 'bg-[#2B1720] text-white shadow-xs'
+                  : 'text-[#161616]/75 hover:text-[#2B1720]'
+              }`}
+            >
+              <BookOpen className={`w-3.5 h-3.5 ${activeView === 'checklist' ? 'text-[#E76F61]' : 'text-[#6D1835]'}`} />
+              <span>60 Symptome</span>
+              <span className="text-[10px] px-1.5 py-0.2 rounded-full font-bold bg-[#E76F61]/25 text-[#6D1835]">
+                60
+              </span>
+            </button>
+
+            <button
               onClick={() => onSelectView('dots')}
-              className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 relative ${
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 relative ${
                 activeView === 'dots'
                   ? 'bg-[#2B1720] text-white shadow-xs'
                   : 'text-[#161616]/75 hover:text-[#2B1720]'
@@ -95,7 +111,7 @@ export const Header: React.FC<HeaderProps> = ({
 
             <button
               onClick={() => onSelectView('toolkits')}
-              className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
                 activeView === 'toolkits'
                   ? 'bg-[#2B1720] text-white shadow-xs'
                   : 'text-[#161616]/75 hover:text-[#2B1720]'
@@ -113,7 +129,7 @@ export const Header: React.FC<HeaderProps> = ({
             {/* History Tab */}
             <button
               onClick={onOpenHistory}
-              className="px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 text-[#161616]/75 hover:text-[#2B1720] hover:bg-white/60"
+              className="px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 text-[#161616]/75 hover:text-[#2B1720] hover:bg-white/60"
             >
               <History className="w-3.5 h-3.5 text-[#6D1835]" />
               <span>Historie</span>

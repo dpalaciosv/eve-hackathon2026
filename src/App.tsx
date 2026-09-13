@@ -16,9 +16,12 @@ import {
   LifestyleToolkit, 
   DotConnectionAssessment,
   UserProfile,
-  DotConnectionHistoryItem
+  DotConnectionHistoryItem,
+  ChecklistSelection
 } from './types';
-import { Sparkles, Layers, Award, RefreshCw, Smartphone, History, User, Heart } from 'lucide-react';
+import { SymptomChecklist60 } from './components/SymptomChecklist60';
+import { SIXTY_SYMPTOMS } from './data/sixtySymptoms';
+import { Sparkles, Layers, Award, RefreshCw, Smartphone, History, User, Heart, BookOpen } from 'lucide-react';
 
 const MATCH_THRESHOLD = 10;
 
@@ -61,12 +64,32 @@ export default function App() {
   const [latestUnlockedBadge, setLatestUnlockedBadge] = useState<string | null>(null);
 
   // Active View & Modals
-  const [activeView, setActiveView] = useState<'swipe' | 'dots' | 'toolkits'>('swipe');
+  const [activeView, setActiveView] = useState<'swipe' | 'checklist' | 'dots' | 'toolkits'>('swipe');
   const [isMobileSimulator, setIsMobileSimulator] = useState(false);
   const [isPitchGuideOpen, setIsPitchGuideOpen] = useState(false);
   const [isGamificationDrawerOpen, setIsGamificationDrawerOpen] = useState(false);
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
   const [isHistoryModalOpen, setIsHistoryModalOpen] = useState(false);
+
+  // 60-Symptom Checklist State (persisted to localStorage)
+  const [checklist, setChecklist] = useState<ChecklistSelection>(() => {
+    try {
+      const saved = localStorage.getItem('eve_symptom_checklist');
+      if (saved) return JSON.parse(saved);
+    } catch (e) {
+      console.error("Could not load symptom checklist:", e);
+    }
+    return {};
+  });
+
+  // Sync checklist to localStorage
+  useEffect(() => {
+    try {
+      localStorage.setItem('eve_symptom_checklist', JSON.stringify(checklist));
+    } catch (e) {
+      console.error(e);
+    }
+  }, [checklist]);
 
   // Assessment & AI Generation
   const [assessment, setAssessment] = useState<DotConnectionAssessment | null>(null);
@@ -207,9 +230,91 @@ export default function App() {
       }
     }
 
+    // Bi-directional sync with 60-symptom checklist
+    if (card.type === 'symptom') {
+      const matchIn60 = SIXTY_SYMPTOMS.find(s => 
+        card.id === `sym-60-${s.id}` || 
+        s.titleDe.toLowerCase().includes(card.title.toLowerCase()) || 
+        card.title.toLowerCase().includes(s.titleDe.toLowerCase())
+      );
+      if (matchIn60) {
+        setChecklist(prev => ({
+          ...prev,
+          [matchIn60.id]: action === 'present' ? 'yes' : 'no'
+        }));
+      }
+    }
+
     evaluateGamificationProgress(newPresent, newHistory);
 
     // If threshold reached and no assessment generated yet, trigger background assessment
+    if (newPresent.length >= MATCH_THRESHOLD && !assessment && !isAssessing) {
+      fetchAssessment(newPresent, newAbsent);
+    }
+  };
+
+  // Handle manual toggle from the 60-symptom checklist
+  const handleToggleChecklistSymptom = (id: number, status: 'yes' | 'no') => {
+    const sym = SIXTY_SYMPTOMS.find(s => s.id === id);
+    if (!sym) return;
+
+    if (viewingHistoricalItem) {
+      setViewingHistoricalItem(null);
+    }
+    setIsCurrentSaved(false);
+
+    const currentStatus = checklist[id];
+    const nextStatus = currentStatus === status ? 'unanswered' : status;
+
+    setChecklist(prev => ({
+      ...prev,
+      [id]: nextStatus
+    }));
+
+    const cardId = `sym-60-${id}`;
+    let newPresent = [...symptomsPresent];
+    let newAbsent = [...symptomsAbsent];
+
+    if (nextStatus === 'yes') {
+      newAbsent = newAbsent.filter(c => c.id !== cardId && c.title !== sym.titleDe);
+      if (!newPresent.some(c => c.id === cardId || c.title === sym.titleDe)) {
+        newPresent.push({
+          id: cardId,
+          type: 'symptom',
+          category: sym.categoryTitle,
+          title: sym.titleDe,
+          prompt: sym.clinicalQuestionDe,
+          subtext: sym.description,
+          clinicalCorrelation: sym.biologicalRationale,
+          icon: sym.icon,
+          accentColor: '#6D1835'
+        });
+      }
+    } else if (nextStatus === 'no') {
+      newPresent = newPresent.filter(c => c.id !== cardId && c.title !== sym.titleDe);
+      if (!newAbsent.some(c => c.id === cardId || c.title === sym.titleDe)) {
+        newAbsent.push({
+          id: cardId,
+          type: 'symptom',
+          category: sym.categoryTitle,
+          title: sym.titleDe,
+          prompt: sym.clinicalQuestionDe,
+          subtext: sym.description,
+          clinicalCorrelation: sym.biologicalRationale,
+          icon: sym.icon,
+          accentColor: '#6D1835'
+        });
+      }
+    } else {
+      // Unanswered / toggled off
+      newPresent = newPresent.filter(c => c.id !== cardId && c.title !== sym.titleDe);
+      newAbsent = newAbsent.filter(c => c.id !== cardId && c.title !== sym.titleDe);
+    }
+
+    setSymptomsPresent(newPresent);
+    setSymptomsAbsent(newAbsent);
+    evaluateGamificationProgress(newPresent, swipeHistory);
+
     if (newPresent.length >= MATCH_THRESHOLD && !assessment && !isAssessing) {
       fetchAssessment(newPresent, newAbsent);
     }
@@ -380,6 +485,12 @@ export default function App() {
     setSwipeHistory([]);
     setSymptomsPresent([]);
     setSymptomsAbsent([]);
+    setChecklist({});
+    try {
+      localStorage.removeItem('eve_symptom_checklist');
+    } catch (e) {
+      console.error(e);
+    }
     setBadges(INITIAL_BADGES);
     setToolkits(INITIAL_TOOLKITS);
     setAssessment(null);
@@ -393,6 +504,27 @@ export default function App() {
 
   // View content renderer
   const renderMainContent = () => {
+    if (activeView === 'checklist') {
+      return (
+        <SymptomChecklist60
+          checklist={checklist}
+          onToggleSymptom={handleToggleChecklistSymptom}
+          onConnectTheDots={() => {
+            setActiveView('dots');
+            if (symptomsPresent.length >= MATCH_THRESHOLD && !assessment && !isAssessing) {
+              handleConnectTheDots();
+            }
+          }}
+          onOpenDoctorExport={() => {
+            setActiveView('dots');
+            if (!assessment && !isAssessing) {
+              handleConnectTheDots();
+            }
+          }}
+        />
+      );
+    }
+
     if (activeView === 'dots') {
       const displayAssessment = viewingHistoricalItem ? viewingHistoricalItem.assessment : assessment;
       const displayPresent = viewingHistoricalItem && viewingHistoricalItem.symptomsPresentCards 
@@ -492,6 +624,7 @@ export default function App() {
           onGenerateMoreCards={handleGenerateMoreCards}
           isGeneratingCards={isGeneratingCards}
           latestUnlockedBadge={latestUnlockedBadge}
+          onOpenChecklist={() => setActiveView('checklist')}
         />
       </div>
     );
